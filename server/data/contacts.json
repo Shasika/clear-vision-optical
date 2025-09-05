@@ -1,0 +1,89 @@
+[
+  {
+    "id": "contact_1703843200000_abc123xyz",
+    "customerInfo": {
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "phone": "+94 77 123 4567"
+    },
+    "serviceInterest": "eye-exam",
+    "message": "I would like to schedule a comprehensive eye examination. I've been having some vision issues lately.",
+    "status": "new",
+    "priority": "medium",
+    "createdAt": "2024-12-29T12:00:00.000Z",
+    "updatedAt": "2024-12-29T12:00:00.000Z",
+    "source": "contact-form",
+    "assignedTo": "Dr. Smith",
+    "notes": "Customer mentioned recent vision changes",
+    "followUpDate": "2024-12-30T10:00:00.000Z"
+  },
+  {
+    "id": "contact_1703929600000_def456uvw",
+    "customerInfo": {
+      "name": "Sarah Johnson",
+      "email": "sarah.johnson@email.com",
+      "phone": "+94 71 987 6543"
+    },
+    "serviceInterest": "prescription-glasses",
+    "message": "Looking for new prescription glasses. My current ones are quite old.",
+    "status": "in-progress",
+    "priority": "medium",
+    "createdAt": "2024-12-30T12:00:00.000Z",
+    "updatedAt": "2024-12-30T14:30:00.000Z",
+    "source": "phone",
+    "assignedTo": "Emily Davis",
+    "notes": "Prescription needs updating, interested in progressive lenses"
+  },
+  {
+    "id": "contact_1704016000000_ghi789rst",
+    "customerInfo": {
+      "name": "Michael Chen",
+      "email": "m.chen@company.com",
+      "phone": "+94 76 555 9876"
+    },
+    "serviceInterest": "contact-lenses",
+    "message": "Interested in switching from glasses to contact lenses. Need consultation.",
+    "status": "contacted",
+    "priority": "high",
+    "createdAt": "2024-12-31T09:15:00.000Z",
+    "updatedAt": "2025-01-01T10:00:00.000Z",
+    "source": "referral",
+    "assignedTo": "Dr. Smith",
+    "notes": "First-time contact lens user, needs detailed consultation",
+    "followUpDate": "2025-01-03T14:00:00.000Z"
+  },
+  {
+    "id": "contact_1704102400000_jkl012mno",
+    "customerInfo": {
+      "name": "Emma Wilson",
+      "email": "emma.w@gmail.com"
+    },
+    "serviceInterest": "frame-repair",
+    "message": "My glasses frame broke. Can you repair it or do I need a replacement?",
+    "status": "scheduled",
+    "priority": "low",
+    "createdAt": "2025-01-01T12:00:00.000Z",
+    "updatedAt": "2025-01-01T16:20:00.000Z",
+    "source": "walk-in",
+    "assignedTo": "John Technician",
+    "notes": "Simple frame repair, appointment scheduled",
+    "followUpDate": "2025-01-02T11:00:00.000Z"
+  },
+  {
+    "id": "contact_1704188800000_pqr345stu",
+    "customerInfo": {
+      "name": "David Brown",
+      "email": "david.brown@outlook.com",
+      "phone": "+94 75 246 8135"
+    },
+    "serviceInterest": "eye-exam",
+    "message": "Annual eye checkup. No specific issues, just routine examination.",
+    "status": "completed",
+    "priority": "low",
+    "createdAt": "2025-01-02T08:00:00.000Z",
+    "updatedAt": "2025-01-02T17:45:00.000Z",
+    "source": "contact-form",
+    "assignedTo": "Dr. Johnson",
+    "notes": "Routine checkup completed successfully, no issues found"
+  }
+]

@@ -1,0 +1,268 @@
+{
+  "companyInfo": {
+    "name": "ClearVision",
+    "tagline": "Clear Vision, Better Life",
+    "description": "Premium optical solutions with over 20 years of experience in eye care and fashion eyewear.",
+    "established": "2004",
+    "logo": "/images/company/1757069051445_sunglasses.png"
+  },
+  "contact": {
+    "address": {
+      "street": "123 Main Street",
+      "city": "Colombo",
+      "state": "Western Province",
+      "zipCode": "00100",
+      "country": "Sri Lanka"
+    },
+    "phone": {
+      "primary": "+94 11 123 4567",
+      "secondary": "+94 77 123 4567"
+    },
+    "email": {
+      "primary": "info@opticalvision.lk",
+      "support": "support@opticalvision.lk"
+    },
+    "website": "https://opticalvision.lk",
+    "socialMedia": {
+      "facebook": "https://facebook.com/opticalvision",
+      "instagram": "https://instagram.com/opticalvision",
+      "twitter": "https://twitter.com/opticalvision"
+    }
+  },
+  "businessHours": {
+    "monday": {
+      "open": "09:00",
+      "close": "18:00",
+      "closed": false
+    },
+    "tuesday": {
+      "open": "09:00",
+      "close": "18:00",
+      "closed": false
+    },
+    "wednesday": {
+      "open": "09:00",
+      "close": "18:00",
+      "closed": false
+    },
+    "thursday": {
+      "open": "09:00",
+      "close": "18:00",
+      "closed": false
+    },
+    "friday": {
+      "open": "09:00",
+      "close": "18:00",
+      "closed": false
+    },
+    "saturday": {
+      "open": "09:00",
+      "close": "17:00",
+      "closed": false
+    },
+    "sunday": {
+      "open": "10:00",
+      "close": "16:00",
+      "closed": false
+    }
+  },
+  "services": [
+    {
+      "id": "eye-examination",
+      "name": "Comprehensive Eye Examination",
+      "description": "Complete eye health assessment with latest technology",
+      "price": 2500,
+      "duration": "45 minutes",
+      "icon": "eye"
+    },
+    {
+      "id": "prescription-glasses",
+      "name": "Prescription Glasses",
+      "description": "Custom prescription lenses with wide frame selection",
+      "price": "Starting from 5000",
+      "duration": "1-2 days",
+      "icon": "glasses"
+    },
+    {
+      "id": "contact-lenses",
+      "name": "Contact Lenses",
+      "description": "Professional contact lens fitting and supply",
+      "price": "Starting from 3000",
+      "duration": "30 minutes",
+      "icon": "contact"
+    },
+    {
+      "id": "sunglasses",
+      "name": "Designer Sunglasses",
+      "description": "Premium sunglasses from top international brands",
+      "price": "Starting from 8000",
+      "duration": "Immediate",
+      "icon": "sun"
+    }
+  ],
+  "features": [
+    {
+      "title": "Premium Quality",
+      "description": "High-quality lenses and frames from trusted brands worldwide",
+      "icon": "award"
+    },
+    {
+      "title": "Expert Service",
+      "description": "Professional eye care specialists with over 20 years of experience",
+      "icon": "users"
+    },
+    {
+      "title": "Latest Technology",
+      "description": "State-of-the-art equipment for precise eye examinations",
+      "icon": "settings"
+    },
+    {
+      "title": "Wide Selection",
+      "description": "Extensive collection of frames for every style and budget",
+      "icon": "package"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "testimonial-1",
+      "name": "Samantha Perera",
+      "rating": 5,
+      "comment": "Excellent service and great selection of frames. The staff was very helpful in choosing the perfect glasses for me.",
+      "date": "2024-01-15",
+      "verified": true
+    },
+    {
+      "id": "testimonial-2",
+      "name": "Roshan Silva",
+      "rating": 5,
+      "comment": "Professional eye examination and quick service. Very satisfied with my new prescription glasses.",
+      "date": "2024-01-20",
+      "verified": true
+    }
+  ],
+  "aboutPage": {
+    "mission": "To provide exceptional vision care and premium eyewear solutions that enhance our customers' quality of life with personalized service and expert guidance.",
+    "vision": "To be Sri Lanka's leading optical care provider, recognized for innovation, quality, and customer satisfaction in eye care services.",
+    "values": [
+      "Customer-first approach with personalized service",
+      "Quality commitment with premium products",
+      "Professional expertise and continuous learning",
+      "Innovation in eye care technology",
+      "Community trust and long-term relationships"
+    ],
+    "history": "ClearVision was founded in 2004 with a simple yet powerful vision: to make quality eyewear accessible to everyone while providing exceptional customer service. What started as a small family business has grown into one of Sri Lanka's most trusted optical retailers.\n\nOur founder, Dr. Saman Perera, a qualified optometrist with over 25 years of experience, recognized the need for a comprehensive optical service that combined professional eye care with a wide selection of quality frames and lenses.\n\nToday, we continue to uphold these founding principles while embracing the latest technology and trends in eyewear. From our flagship store in Colombo, we serve customers across the island with the same dedication to quality and service that has defined us from the beginning.",
+    "team": [
+      {
+        "name": "Dr. Saman Perera",
+        "position": "Founder & Chief Optometrist",
+        "description": "25+ years experience in optometry and eye care",
+        "image": "/images/team/1757042178033_boy.png"
+      },
+      {
+        "name": "Priya Jayawardena",
+        "position": "Senior Optical Consultant",
+        "description": "15+ years experience in optical consulting",
+        "image": "/images/team/1757042140294_woman.png"
+      },
+      {
+        "name": "Rajesh Kumar",
+        "position": "Frame Specialist",
+        "description": "12+ years experience in frame fitting and styling",
+        "image": "/images/team/1757042172371_man.png"
+      }
+    ]
+  },
+  "footer": {
+    "quickLinks": [
+      {
+        "title": "Home",
+        "url": "/"
+      },
+      {
+        "title": "About Us",
+        "url": "/about"
+      },
+      {
+        "title": "Frames Collection",
+        "url": "/frames"
+      },
+      {
+        "title": "Sunglasses",
+        "url": "/sunglasses"
+      },
+      {
+        "title": "Services",
+        "url": "/services"
+      },
+      {
+        "title": "Contact",
+        "url": "/contact"
+      }
+    ],
+    "aboutText": "Your trusted optical partner providing premium eyewear solutions with over 20 years of experience. We offer the latest in frame designs, lens technology, and professional eye care services.",
+    "copyrightText": "© 2024 ClearVision. All rights reserved."
+  },
+  "homePage": {
+    "heroTitle": "Clear Vision",
+    "heroSubtitle": "Better Life",
+    "ctaButtons": {
+      "frames": "Browse Frames",
+      "sunglasses": "View Sunglasses",
+      "appointment": "Book Appointment"
+    },
+    "sectionsHeadings": {
+      "whyChoose": "Why Choose ClearVision?",
+      "whyChooseDescription": "We combine years of expertise with cutting-edge technology to provide you with the best optical solutions.",
+      "featuredProducts": "Featured Products",
+      "featuredProductsDescription": "Discover our latest and most popular eyewear collection",
+      "visitUs": "Visit Us Today",
+      "visitUsDescription": "Experience our premium eyewear collection and professional service",
+      "finalCta": "Ready to Find Your Perfect Frames?",
+      "finalCtaDescription": "Visit our showroom today and let our experts help you choose the perfect eyewear for your needs and style."
+    }
+  },
+  "contactPage": {
+    "heroTitle": "Get in Touch",
+    "heroDescription": "Ready to experience clearer vision? Contact us today to schedule your appointment or ask any questions about our services.",
+    "formLabels": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "service": "Service Interested In",
+      "message": "Message",
+      "submit": "Send Message"
+    },
+    "mapSection": {
+      "title": "Find Our Location",
+      "description": "Visit us at our convenient location in the heart of Colombo. Easy parking available."
+    }
+  },
+  "siteContent": {
+    "navigation": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "About",
+        "href": "/about"
+      },
+      {
+        "name": "Frames",
+        "href": "/frames"
+      },
+      {
+        "name": "Sunglasses",
+        "href": "/sunglasses"
+      },
+      {
+        "name": "Services",
+        "href": "/services"
+      },
+      {
+        "name": "Contact",
+        "href": "/contact"
+      }
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+[
+  {
+    "id": "frame-002",
+    "name": "Oakley Holbrook test",
+    "brand": "Oakley",
+    "category": "sunglasses",
+    "material": "plastic",
+    "shape": "square",
+    "color": "Matte Black",
+    "price": 18500,
+    "inStock": true,
+    "description": "Sport-inspired sunglasses with high-definition optics and impact resistance",
+    "features": [
+      "Impact Resistant",
+      "HD Optics",
+      "Lightweight"
+    ],
+    "gender": "men",
+    "frameSize": {
+      "lens_width": 56,
+      "bridge_width": 18,
+      "temple_length": 137
+    },
+    "imageUrl": "/images/frames/1756977775610_test0125.jpg",
+    "images": [
+      "/images/frames/1756977775610_test0125.jpg"
+    ]
+  },
+  {
+    "id": "frame-001",
+    "name": "Ray-Ban Classic Wayfarer",
+    "brand": "Ray-Ban",
+    "category": "sunglasses",
+    "material": "acetate",
+    "shape": "wayfarer",
+    "color": "Black",
+    "price": 15000,
+    "inStock": true,
+    "description": "Classic wayfarer sunglasses with timeless design and superior UV protection",
+    "features": [
+      "UV Protection",
+      "Classic Design",
+      "Durable"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 50,
+      "bridge_width": 22,
+      "temple_length": 150
+    },
+    "imageUrl": "/images/frames/1756996883881_test0126.jpg",
+    "images": [
+      "/images/frames/1756996883881_test0126.jpg"
+    ]
+  },
+  {
+    "id": "frame-003",
+    "name": "Test Frame No Images yes",
+    "brand": "Test Brand",
+    "category": "prescription",
+    "material": "metal",
+    "shape": "rectangle",
+    "color": "Silver",
+    "price": 12000,
+    "inStock": true,
+    "description": "Test frame with no images to test placeholder",
+    "features": [
+      "Lightweight",
+      "Durable"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 52,
+      "bridge_width": 20,
+      "temple_length": 145
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "name": "test ",
+    "brand": "dfgdfgdf",
+    "category": "prescription",
+    "material": "metal",
+    "shape": "rectangle",
+    "color": "Black",
+    "price": 123456,
+    "inStock": true,
+    "description": "dsfsdsdv s df",
+    "features": [
+      "tesdt"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 12,
+      "bridge_width": 22,
+      "temple_length": 22
+    },
+    "imageUrl": "",
+    "images": [],
+    "id": "frame-1757042285568"
+  }
+]

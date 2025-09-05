@@ -1,0 +1,29 @@
+id:FR001|name:Classic Vision Pro|brand:RayBan|category:prescription|material:metal|shape:rectangle|color:Black|price:15500|inStock:true|description:Premium metal frames with anti-glare coating and adjustable nose pads|features:Anti-glare coating,Adjustable nose pads,Lightweight design,Scratch resistant|gender:unisex|lens_width:52|bridge_width:18|temple_length:140
+
+id:FR002|name:Trendy Cat-Eye|brand:Oakley|category:prescription|material:acetate|shape:cat-eye|color:Tortoise|price:18500|inStock:true|description:Stylish acetate cat-eye frames perfect for professional and casual wear|features:Flexible hinges,Hypoallergenic,UV protection,Comfortable fit|gender:women|lens_width:54|bridge_width:16|temple_length:135
+
+id:FR003|name:Aviator Classic|brand:RayBan|category:sunglasses|material:metal|shape:aviator|color:Gold|price:22500|inStock:true|description:Iconic aviator sunglasses with polarized lenses and gold-tone frame|features:Polarized lenses,100% UV protection,Anti-reflective coating,Classic design|gender:unisex|lens_width:58|bridge_width:14|temple_length:135
+
+id:FR004|name:Modern Square|brand:Gucci|category:prescription|material:plastic|shape:square|color:Blue|price:25500|inStock:false|description:Contemporary square frames with bold design and premium materials|features:Premium materials,Bold design,Comfortable temples,Designer brand|gender:men|lens_width:55|bridge_width:17|temple_length:142
+
+id:FR005|name:Round Vintage|brand:Persol|category:prescription|material:acetate|shape:round|color:Brown|price:19500|inStock:true|description:Vintage-inspired round frames with handcrafted acetate construction|features:Handcrafted,Vintage design,Durable construction,Premium acetate|gender:unisex|lens_width:50|bridge_width:20|temple_length:145
+
+id:FR006|name:Sport Performance|brand:Oakley|category:sunglasses|material:plastic|shape:rectangle|color:Matte Black|price:16500|inStock:true|description:High-performance sports sunglasses with impact-resistant lenses|features:Impact resistant,Sports design,Grip technology,Lightweight|gender:unisex|lens_width:60|bridge_width:15|temple_length:130
+
+id:FR007|name:Reading Comfort|brand:Foster Grant|category:reading|material:plastic|shape:rectangle|color:Red|price:8500|inStock:true|description:Comfortable reading glasses with spring hinges and clear optics|features:Spring hinges,Clear optics,Comfortable fit,Affordable price|gender:women|lens_width:52|bridge_width:18|temple_length:140
+
+id:FR008|name:Computer Shield|brand:Gunnar|category:computer|material:titanium|shape:rectangle|color:Silver|price:21500|inStock:true|description:Computer glasses with blue light filtering and titanium construction|features:Blue light filter,Titanium frame,Reduce eye strain,Professional look|gender:unisex|lens_width:54|bridge_width:16|temple_length:138
+
+id:FR009|name:Wayfarer Style|brand:RayBan|category:sunglasses|material:acetate|shape:wayfarer|color:Black|price:17500|inStock:true|description:Classic wayfarer sunglasses with timeless design and UV protection|features:Timeless design,UV protection,Durable acetate,Iconic style|gender:unisex|lens_width:50|bridge_width:22|temple_length:150
+
+id:FR010|name:Oval Elegance|brand:Chanel|category:prescription|material:mixed|shape:oval|color:Purple|price:35500|inStock:true|description:Elegant oval frames with mixed materials and luxury finishing|features:Luxury finishing,Mixed materials,Elegant design,Premium brand|gender:women|lens_width:51|bridge_width:19|temple_length:140
+
+id:FR011|name:Titanium Pro|brand:Silhouette|category:prescription|material:titanium|shape:rectangle|color:Gunmetal|price:28500|inStock:true|description:Ultra-lightweight titanium frames with minimalist design and superior comfort|features:Ultra-lightweight,Minimalist design,Superior comfort,Corrosion resistant|gender:men|lens_width:56|bridge_width:17|temple_length:145
+
+id:FR012|name:Colorful Round|brand:Anne Klein|category:prescription|material:plastic|shape:round|color:Pink|price:12500|inStock:false|description:Vibrant round frames with colorful plastic construction and trendy appeal|features:Vibrant colors,Trendy appeal,Lightweight plastic,Fashion forward|gender:women|lens_width:48|bridge_width:20|temple_length:135
+
+id:FR013|name:Executive Metal|brand:Hugo Boss|category:prescription|material:metal|shape:rectangle|color:Silver|price:24500|inStock:true|description:Professional metal frames designed for executives and business professionals|features:Professional design,Business appropriate,Quality metal,Executive style|gender:men|lens_width:55|bridge_width:18|temple_length:142
+
+id:FR014|name:Vintage Cat|brand:Dior|category:sunglasses|material:acetate|shape:cat-eye|color:Cream|price:32500|inStock:true|description:Vintage-inspired cat-eye sunglasses with luxury acetate and designer appeal|features:Luxury acetate,Designer appeal,Vintage inspired,High fashion|gender:women|lens_width:52|bridge_width:16|temple_length:140
+
+id:FR015|name:Sports Wrap|brand:Nike|category:sunglasses|material:plastic|shape:rectangle|color:White|price:14500|inStock:true|description:Athletic wrap-around sunglasses with performance features and impact protection|features:Wrap-around design,Performance features,Impact protection,Athletic styling|gender:unisex|lens_width:65|bridge_width:12|temple_length:125

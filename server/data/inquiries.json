@@ -1,0 +1,23 @@
+[
+  {
+    "id": "INQ-1757013232373-z457c95q7",
+    "customerInfo": {
+      "name": "sdfsdf",
+      "email": "test@gmail.com",
+      "phone": "0712345678"
+    },
+    "product": {
+      "id": "frame-002",
+      "name": "Oakley Holbrook test",
+      "brand": "Oakley",
+      "type": "frame",
+      "price": 18500,
+      "imageUrl": "/images/frames/1756977775610_test0125.jpg"
+    },
+    "message": "I'm interested in the Oakley Oakley Holbrook test. Could you please provide more information about pricing and availability?",
+    "status": "new",
+    "priority": "medium",
+    "createdAt": "2025-09-04T19:13:52.373Z",
+    "updatedAt": "2025-09-04T19:13:52.373Z"
+  }
+]

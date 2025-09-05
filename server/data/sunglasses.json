@@ -1,0 +1,65 @@
+[
+  {
+    "id": "sg-001",
+    "name": "Ray-Ban Classic Aviator",
+    "brand": "Ray-Ban",
+    "category": "classic",
+    "material": "metal",
+    "shape": "aviator",
+    "color": "Gold/Green",
+    "price": 18500,
+    "inStock": true,
+    "description": "The original aviator sunglasses with green classic lenses",
+    "features": [
+      "Classic Design",
+      "Premium Quality",
+      "Scratch Resistant"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 58,
+      "bridge_width": 14,
+      "temple_length": 135
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": false,
+      "tinted": true,
+      "mirrored": false
+    },
+    "imageUrl": "/images/sunglasses/1756998180381_sun_2.jpg",
+    "images": [
+      "/images/sunglasses/1756998180381_sun_2.jpg",
+      "/images/sunglasses/1756998180391_sun_1.png"
+    ]
+  },
+  {
+    "id": "sg-002",
+    "name": "Test Sunglasses No Images",
+    "brand": "Test Brand",
+    "category": "sport",
+    "material": "plastic",
+    "shape": "rectangle",
+    "color": "Black",
+    "price": 15000,
+    "inStock": true,
+    "description": "Test sunglasses with no images to test placeholder",
+    "features": [
+      "Test Feature"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 60,
+      "bridge_width": 15,
+      "temple_length": 140
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": true,
+      "tinted": true,
+      "mirrored": false
+    },
+    "imageUrl": "",
+    "images": []
+  }
+]
