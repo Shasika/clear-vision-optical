@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Upload, X, AlertCircle, CheckCircle, Image } from 'lucide-react';
+import { Upload, X, AlertCircle, CheckCircle } from 'lucide-react';
 import { dataService } from '../../services/dataService';
 
 interface ImageUploadProps {
@@ -7,15 +7,13 @@ interface ImageUploadProps {
   folder: 'frames' | 'sunglasses' | 'company' | 'team';
   onImageChange: (imageUrl: string | null) => void;
   className?: string;
-  uniqueId?: string; // Add unique identifier for multiple instances
 }
 
 const ImageUpload: React.FC<ImageUploadProps> = ({
   currentImage,
   folder,
   onImageChange,
-  className = '',
-  uniqueId
+  className = ''
 }) => {
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);

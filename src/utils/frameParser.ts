@@ -8,7 +8,7 @@ export const parseFrameData = (textData: string): Frame[] => {
     if (line.trim() === '') continue;
     
     const fields = line.split('|');
-    const frameData: any = {};
+    const frameData: Record<string, string> = {};
     
     for (const field of fields) {
       const [key, value] = field.split(':');

@@ -6,8 +6,6 @@ import {
   Edit, 
   Trash2, 
   Eye, 
-  Filter,
-  MoreHorizontal,
   AlertTriangle
 } from 'lucide-react';
 import { useFramesAdmin } from '../../../hooks/useFramesAdmin';

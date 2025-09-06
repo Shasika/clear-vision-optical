@@ -1,6 +1,6 @@
 import type { Sunglasses } from '../types/sunglasses';
 
-export const parseSunglassesData = (textData: string): Sunglasses[] => {
+export const parseSunglassesData = (): Sunglasses[] => {
   // Parse sunglasses data from text format
   // This is a mock implementation - in real scenario this would parse actual data
   const mockSunglasses: Sunglasses[] = [

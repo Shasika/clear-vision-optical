@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, Filter, X, SlidersHorizontal, Sun } from 'lucide-react';
+import { Search, X, SlidersHorizontal, Sun } from 'lucide-react';
 import type { SunglassesFilters, Sunglasses as SunglassesType } from '../types/sunglasses';
 import { useSunglasses } from '../hooks/useSunglasses';
 import SunglassesCard from '../components/SunglassesCard';
@@ -94,7 +94,7 @@ const Sunglasses: React.FC = () => {
   const endIndex = startIndex + itemsPerPage;
   const currentSunglasses = allFilteredSunglasses.slice(startIndex, endIndex);
 
-  const handleFilterChange = (key: keyof SunglassesFilters, value: any) => {
+  const handleFilterChange = (key: keyof SunglassesFilters, value: string | number | boolean | { min: number; max: number } | undefined) => {
     setFilters(prev => ({
       ...prev,
       [key]: value
@@ -117,7 +117,7 @@ const Sunglasses: React.FC = () => {
   const activeFilterCount = Object.keys(filters).filter(key => {
     const value = filters[key as keyof SunglassesFilters];
     if (key === 'priceRange') {
-      return value && ((value as any).min !== undefined || (value as any).max !== undefined);
+      return value && typeof value === 'object' && ('min' in value || 'max' in value);
     }
     return value !== undefined && value !== '' && value !== null;
   }).length + (searchQuery ? 1 : 0);
@@ -241,7 +241,7 @@ const Sunglasses: React.FC = () => {
               
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
+                onChange={(e) => setSortBy(e.target.value as 'name' | 'price-low' | 'price-high' | 'brand')}
                 className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-orange-500 focus:border-orange-500"
               >
                 <option value="name">Sort by Name</option>

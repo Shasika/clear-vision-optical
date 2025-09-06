@@ -405,7 +405,7 @@ const CompanySettings: React.FC = () => {
         <div className="sm:hidden">
           <select
             value={activeTab}
-            onChange={(e) => setActiveTab(e.target.value as any)}
+            onChange={(e) => setActiveTab(e.target.value as 'company' | 'contact' | 'hours' | 'services' | 'features' | 'about' | 'footer' | 'homepage' | 'contactpage' | 'navigation')}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-primary-500 focus:border-primary-500 bg-white"
           >
             {tabs.map((tab) => (
@@ -423,7 +423,7 @@ const CompanySettings: React.FC = () => {
             return (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id as any)}
+                onClick={() => setActiveTab(tab.id as 'company' | 'contact' | 'hours' | 'services' | 'features' | 'about' | 'footer' | 'homepage' | 'contactpage' | 'navigation')}
                 className={`flex items-center py-2 px-3 mr-2 mb-2 border-b-2 font-medium text-sm whitespace-nowrap ${
                   activeTab === tab.id
                     ? 'border-primary-500 text-primary-600'

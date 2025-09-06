@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, Calendar, User, MessageSquare, Clock, CheckCircle, XCircle, AlertCircle, Eye, Trash2, Filter, Search, Plus } from 'lucide-react';
+import { Phone, Calendar, User, Clock, CheckCircle, XCircle, AlertCircle, Eye, Trash2, Filter, Search } from 'lucide-react';
 import type { Contact, ContactStats, ContactFilters } from '../../../types/contact';
 import { contactService } from '../../../services/contactService';
 import { usePagination } from '../../../hooks/usePagination';
@@ -13,7 +13,6 @@ const ContactManagement: React.FC = () => {
   const [contacts, setContacts] = useState<Contact[]>([]);
   const [stats, setStats] = useState<ContactStats | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
   const [selectedContact, setSelectedContact] = useState<Contact | null>(null);
   const [showFilters, setShowFilters] = useState(false);
   const [filters, setFilters] = useState<ContactFilters>({});
@@ -47,7 +46,6 @@ const ContactManagement: React.FC = () => {
       const data = await contactService.getContacts();
       setContacts(data);
     } catch (err) {
-      setError('Failed to load contacts');
       console.error('Error fetching contacts:', err);
     } finally {
       setLoading(false);

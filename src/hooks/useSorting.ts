@@ -11,7 +11,7 @@ export interface SortOption<T> {
   key: keyof T;
   label: string;
   type?: 'string' | 'number' | 'date' | 'boolean';
-  getValue?: (item: T) => any;
+  getValue?: (item: T) => unknown;
 }
 
 export interface UseSortingConfig<T> {
@@ -53,8 +53,8 @@ export function useSorting<T>(
     const sortOption = sortOptions.find(option => option.key === sortConfig.key);
     
     sortableItems.sort((a, b) => {
-      let aValue: any;
-      let bValue: any;
+      let aValue: unknown;
+      let bValue: unknown;
 
       if (sortOption?.getValue) {
         aValue = sortOption.getValue(a);
@@ -74,29 +74,33 @@ export function useSorting<T>(
       let comparison = 0;
 
       switch (sortType) {
-        case 'string':
+        case 'string': {
           const aStr = String(aValue).toLowerCase();
           const bStr = String(bValue).toLowerCase();
           comparison = aStr.localeCompare(bStr);
           break;
+        }
         
-        case 'number':
+        case 'number': {
           const aNum = Number(aValue);
           const bNum = Number(bValue);
           comparison = aNum - bNum;
           break;
+        }
         
-        case 'date':
-          const aDate = new Date(aValue).getTime();
-          const bDate = new Date(bValue).getTime();
+        case 'date': {
+          const aDate = new Date(aValue as string | number | Date).getTime();
+          const bDate = new Date(bValue as string | number | Date).getTime();
           comparison = aDate - bDate;
           break;
+        }
         
-        case 'boolean':
+        case 'boolean': {
           const aBool = Boolean(aValue);
           const bBool = Boolean(bValue);
           comparison = aBool === bBool ? 0 : aBool ? 1 : -1;
           break;
+        }
         
         default:
           // Default string comparison

@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Frame } from '../types/frames';
-import { Eye, ShoppingCart, Info } from 'lucide-react';
+import { ShoppingCart, Info } from 'lucide-react';
 import ImageGallery from './ImageGallery';
 
 interface FrameCardProps {
@@ -14,9 +14,6 @@ const FrameCard: React.FC<FrameCardProps> = ({ frame, onViewDetails, onAddToCart
     return `LKR ${price.toLocaleString()}`;
   };
 
-  const getStockStatus = (inStock: boolean) => {
-    return inStock ? 'In Stock' : 'Out of Stock';
-  };
 
   const getStockColor = (inStock: boolean) => {
     return inStock ? 'text-green-600 bg-green-50' : 'text-red-600 bg-red-50';

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { ArrowLeft, Save, Upload, X } from 'lucide-react';
+import { ArrowLeft, Save, X } from 'lucide-react';
 import { useFramesAdmin } from '../../../hooks/useFramesAdmin';
-import ImageUpload from '../../../components/admin/ImageUpload';
 import ImageGalleryUpload from '../../../components/admin/ImageGalleryUpload';
 import type { Frame } from '../../../types/frames';
 
@@ -77,7 +76,7 @@ const FrameForm: React.FC = () => {
     };
     
     loadFrameData();
-  }, [id, isEditing, framesLoading, frames.length]);
+  }, [id, isEditing, framesLoading, frames.length, getFrameById]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
@@ -87,7 +86,7 @@ const FrameForm: React.FC = () => {
       setFormData(prev => ({
         ...prev,
         [parent]: {
-          ...(prev[parent as keyof Frame] as any),
+          ...(prev[parent as keyof Frame] as Record<string, unknown>),
           [child]: type === 'number' ? Number(value) : value,
         },
       }));

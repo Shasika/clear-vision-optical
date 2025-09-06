@@ -88,7 +88,7 @@ const SunglassesForm: React.FC = () => {
     };
     
     loadSunglassesData();
-  }, [id, isEditing, sunglassesLoading, sunglasses.length]);
+  }, [id, isEditing, sunglassesLoading, sunglasses.length, getSunglassesById]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
@@ -98,7 +98,7 @@ const SunglassesForm: React.FC = () => {
       setFormData(prev => ({
         ...prev,
         [parent]: {
-          ...(prev[parent as keyof Sunglasses] as any),
+          ...(prev[parent as keyof Sunglasses] as Record<string, unknown>),
           [child]: type === 'number' ? Number(value) : type === 'checkbox' ? (e.target as HTMLInputElement).checked : value,
         },
       }));

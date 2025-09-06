@@ -1,32 +1,7 @@
-import React, { createContext, useContext, useReducer, useEffect } from 'react';
+import React, { useReducer, useEffect } from 'react';
 import { ADMIN_CONFIG } from '../config/admin';
-
-interface AdminUser {
-  username: string;
-  isAuthenticated: boolean;
-  loginTime?: number;
-}
-
-interface AdminAuthState {
-  user: AdminUser | null;
-  isLoading: boolean;
-  error: string | null;
-}
-
-interface AdminContextType extends AdminAuthState {
-  login: (username: string, password: string) => Promise<boolean>;
-  logout: () => void;
-  checkAuthStatus: () => boolean;
-}
-
-const AdminContext = createContext<AdminContextType | undefined>(undefined);
-
-type AdminAction = 
-  | { type: 'LOGIN_START' }
-  | { type: 'LOGIN_SUCCESS'; payload: AdminUser }
-  | { type: 'LOGIN_FAILURE'; payload: string }
-  | { type: 'LOGOUT' }
-  | { type: 'CHECK_AUTH'; payload: AdminUser | null };
+import type { AdminUser, AdminAuthState, AdminContextType, AdminAction } from '../types/admin';
+import { AdminContext } from './AdminContextDefinition';
 
 const adminReducer = (state: AdminAuthState, action: AdminAction): AdminAuthState => {
   switch (action.type) {
@@ -132,10 +107,3 @@ export const AdminProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   );
 };
 
-export const useAdmin = () => {
-  const context = useContext(AdminContext);
-  if (context === undefined) {
-    throw new Error('useAdmin must be used within an AdminProvider');
-  }
-  return context;
-};

@@ -9,7 +9,7 @@ import InquiryModal from '../components/InquiryModal';
 
 const Frames: React.FC = () => {
   const navigate = useNavigate();
-  const { frames, loading, error, filterFrames, searchFrames, getBrands, getCategories, getMaterials, getShapes } = useFrames();
+  const { frames, loading, error, getBrands, getCategories, getMaterials, getShapes } = useFrames();
   
   const [searchQuery, setSearchQuery] = useState('');
   const [filters, setFilters] = useState<FrameFilters>({});
@@ -91,7 +91,7 @@ const Frames: React.FC = () => {
   const endIndex = startIndex + itemsPerPage;
   const currentFrames = allFilteredFrames.slice(startIndex, endIndex);
 
-  const handleFilterChange = (key: keyof FrameFilters, value: any) => {
+  const handleFilterChange = (key: keyof FrameFilters, value: string | number | boolean | { min: number; max: number } | undefined) => {
     setFilters(prev => ({
       ...prev,
       [key]: value
@@ -114,7 +114,7 @@ const Frames: React.FC = () => {
   const activeFilterCount = Object.keys(filters).filter(key => {
     const value = filters[key as keyof FrameFilters];
     if (key === 'priceRange') {
-      return value && ((value as any).min !== undefined || (value as any).max !== undefined);
+      return value && typeof value === 'object' && ('min' in value || 'max' in value);
     }
     return value !== undefined && value !== '' && value !== null;
   }).length + (searchQuery ? 1 : 0);
@@ -238,7 +238,7 @@ const Frames: React.FC = () => {
               
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
+                onChange={(e) => setSortBy(e.target.value as 'name' | 'price-low' | 'price-high' | 'brand')}
                 className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-primary-500 focus:border-primary-500"
               >
                 <option value="name">Sort by Name</option>

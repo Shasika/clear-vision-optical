@@ -7,7 +7,7 @@ const About: React.FC = () => {
   const { companyData, loading } = useCompanyData();
 
   // Icon mapping for dynamic values
-  const iconMap: Record<string, any> = {
+  const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
     Target, Award, Users, Clock, Eye, Star, Shield, Heart
   };
 

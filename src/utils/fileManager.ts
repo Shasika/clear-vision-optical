@@ -82,7 +82,7 @@ export const deleteFile = async (url: string): Promise<DeleteResult> => {
 };
 
 // Generate thumbnail URL (in real app, this would generate actual thumbnails)
-export const getThumbnailUrl = (originalUrl: string, size: 'small' | 'medium' | 'large' = 'small'): string => {
+export const getThumbnailUrl = (originalUrl: string): string => {
   // In a real app, you would generate thumbnails of different sizes
   // For demo purposes, we'll just return the original URL
   return originalUrl;

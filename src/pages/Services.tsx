@@ -7,7 +7,7 @@ const Services: React.FC = () => {
   const { companyData, loading } = useCompanyData();
 
   // Icon mapping for dynamic services
-  const iconMap: Record<string, any> = {
+  const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
     Eye, Glasses, Settings, Shield, Star, Clock, CheckCircle, Phone
   };
 

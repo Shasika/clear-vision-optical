@@ -224,7 +224,7 @@ class DataService {
         throw new Error('Failed to save frames to API');
       }
       
-      const result = await response.json();
+      await response.json();
       console.log(`✅ Saved ${frames.length} frames to backend API`);
       console.log('📊 Database Operation Complete:');
       console.log(`   - Table: frames`);
@@ -446,7 +446,7 @@ class DataService {
         throw new Error('Failed to save sunglasses to API');
       }
       
-      const result = await response.json();
+      await response.json();
       console.log(`✅ Saved ${sunglasses.length} sunglasses to backend API`);
       console.log('📊 Database Operation Complete:');
       console.log(`   - Table: sunglasses`);
@@ -618,7 +618,7 @@ class DataService {
         throw new Error('Failed to save company data to API');
       }
       
-      const result = await response.json();
+      await response.json();
       console.log('✅ Saved company data to backend API');
       console.log('📊 Database Operation Complete:');
       console.log(`   - Table: company`);
@@ -670,12 +670,8 @@ class DataService {
       
       // Create unique filename
       const timestamp = Date.now();
-      const fileExtension = file.name.split('.').pop()?.toLowerCase() || 'jpg';
       const sanitizedName = file.name.replace(/[^a-zA-Z0-9.-]/g, '_').toLowerCase();
       const fileName = `${timestamp}_${sanitizedName}`;
-      
-      // Create the file path
-      const filePath = `/images/${folder}/${fileName}`;
       
       // Convert file to data URL for saving
       const formData = new FormData();
@@ -804,7 +800,7 @@ class DataService {
     const downloadInfo = localStorage.getItem(`download_${filename}`);
     if (downloadInfo) {
       try {
-        const { url, content, filename: fileName } = JSON.parse(downloadInfo);
+        const { url, filename: fileName } = JSON.parse(downloadInfo);
         
         // Create download link
         const a = document.createElement('a');

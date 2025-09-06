@@ -4,17 +4,12 @@ import JSONDownloadUtility from '../../components/admin/JSONDownloadUtility';
 import { 
   Glasses, 
   Sun, 
-  Plus, 
   Eye, 
   TrendingUp, 
   Package,
   AlertTriangle,
-  BarChart3,
   DollarSign,
-  Calendar,
   Activity,
-  Users,
-  ShoppingCart,
   Star,
   Settings,
   RefreshCw,
@@ -22,7 +17,6 @@ import {
   Filter,
   Mail,
   MessageSquare,
-  CheckCircle,
   AlertCircle,
   UserCheck
 } from 'lucide-react';
@@ -94,16 +88,6 @@ const AdminDashboard: React.FC = () => {
     luxury: allItems.filter(item => item.price >= 50000).length,
   };
 
-  // Category breakdown
-  const frameCategories = frames.reduce((acc, frame) => {
-    acc[frame.category] = (acc[frame.category] || 0) + 1;
-    return acc;
-  }, {} as Record<string, number>);
-
-  const sunglassCategories = sunglasses.reduce((acc, sg) => {
-    acc[sg.category] = (acc[sg.category] || 0) + 1;
-    return acc;
-  }, {} as Record<string, number>);
 
   // Material analysis  
   const materials = allItems.reduce((acc, item) => {

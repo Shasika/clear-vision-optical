@@ -5,9 +5,6 @@ import {
   Search, 
   Edit, 
   Trash2, 
-  Eye, 
-  Filter,
-  MoreHorizontal,
   AlertTriangle,
   Sun
 } from 'lucide-react';
@@ -58,7 +55,16 @@ const SunglassesList: React.FC = () => {
 
   // Apply search first
   const searchedSunglasses = useMemo(() => {
-    return searchQuery ? searchSunglasses(searchQuery) : sunglasses;
+    if (!searchQuery) return sunglasses;
+    
+    const searchTerm = searchQuery.toLowerCase();
+    return sunglasses.filter(sg => 
+      sg.name.toLowerCase().includes(searchTerm) ||
+      sg.brand.toLowerCase().includes(searchTerm) ||
+      sg.description.toLowerCase().includes(searchTerm) ||
+      sg.color.toLowerCase().includes(searchTerm) ||
+      sg.features.some(feature => feature.toLowerCase().includes(searchTerm))
+    );
   }, [sunglasses, searchQuery]);
 
   // Apply sorting
@@ -74,16 +80,6 @@ const SunglassesList: React.FC = () => {
     initialItemsPerPage: 10
   });
 
-  const searchSunglasses = (query: string) => {
-    const searchTerm = query.toLowerCase();
-    return sunglasses.filter(sg => 
-      sg.name.toLowerCase().includes(searchTerm) ||
-      sg.brand.toLowerCase().includes(searchTerm) ||
-      sg.description.toLowerCase().includes(searchTerm) ||
-      sg.color.toLowerCase().includes(searchTerm) ||
-      sg.features.some(feature => feature.toLowerCase().includes(searchTerm))
-    );
-  };
 
   const handleDeleteClick = (sunglasses: Sunglasses) => {
     setSunglassesToDelete(sunglasses);

@@ -14,7 +14,7 @@ import {
   Mail,
   MessageSquare
 } from 'lucide-react';
-import { useAdmin } from '../../contexts/AdminContext';
+import { useAdmin } from '../../hooks/useAdmin';
 
 interface AdminLayoutProps {
   children: React.ReactNode;

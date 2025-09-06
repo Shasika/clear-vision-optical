@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Eye, Phone, MapPin } from 'lucide-react';
+import { Menu, X, Phone, MapPin } from 'lucide-react';
 import { useCompanyData } from '../hooks/useCompanyData';
 import ImageWithPlaceholder from './ImageWithPlaceholder';
 

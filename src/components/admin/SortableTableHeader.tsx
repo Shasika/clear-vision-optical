@@ -1,6 +1,5 @@
-import React from 'react';
 import { ChevronUp, ChevronDown, ChevronsUpDown } from 'lucide-react';
-import type { SortConfig, SortOrder } from '../../hooks/useSorting';
+import type { SortConfig } from '../../hooks/useSorting';
 
 interface SortableTableHeaderProps<T> {
   label: string;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, Calendar, User, Package, Clock, CheckCircle, XCircle, AlertCircle, Eye, Trash2, Filter, Search } from 'lucide-react';
+import { Mail, Phone, Calendar, User, Clock, CheckCircle, XCircle, AlertCircle, Eye, Trash2, Filter, Search } from 'lucide-react';
 import type { Inquiry, InquiryStats, InquiryFilters } from '../../../types/inquiry';
 import { usePagination } from '../../../hooks/usePagination';
 import { useSorting } from '../../../hooks/useSorting';
@@ -12,7 +12,6 @@ const InquiryManagement: React.FC = () => {
   const [inquiries, setInquiries] = useState<Inquiry[]>([]);
   const [stats, setStats] = useState<InquiryStats | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
   const [selectedInquiry, setSelectedInquiry] = useState<Inquiry | null>(null);
   const [showFilters, setShowFilters] = useState(false);
   const [filters, setFilters] = useState<InquiryFilters>({});
@@ -360,7 +359,7 @@ const InquiryManagement: React.FC = () => {
               <label className="block text-sm font-medium text-gray-700 mb-1">Product Type</label>
               <select
                 value={filters.productType || ''}
-                onChange={(e) => setFilters({ ...filters, productType: e.target.value as any || undefined })}
+                onChange={(e) => setFilters({ ...filters, productType: (e.target.value as 'frame' | 'sunglasses') || undefined })}
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               >
                 <option value="">All Types</option>

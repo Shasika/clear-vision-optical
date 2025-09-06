@@ -11,11 +11,8 @@ import {
   Phone,
   Mail,
   Star,
-  ChevronLeft,
-  ChevronRight,
   Building,
   Calendar,
-  Sparkles,
   Target,
   TrendingUp,
   Shield,
@@ -31,7 +28,6 @@ const Home: React.FC = () => {
   const { companyData, loading: companyLoading } = useCompanyData();
   const { frames } = useFrames();
   const { sunglasses } = useSunglasses();
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [inquiryStats, setInquiryStats] = useState({ total: 0, thisMonth: 0, completed: 0 });
 
   // Fetch inquiry statistics for stats display
@@ -57,7 +53,7 @@ const Home: React.FC = () => {
   const featuredProducts = [...recentFrames, ...recentSunglasses].slice(0, 4);
 
   // Icon mapping for dynamic features
-  const iconMap: Record<string, any> = {
+  const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
     Eye, Users, Award, ShoppingBag, Star, Building, Target, Shield, Zap, Heart, Clock, MapPin, Phone, Mail
   };
 
@@ -255,7 +251,7 @@ const Home: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {companyData.services.map((service, index) => (
+              {companyData.services.map((service) => (
                 <div key={service.id} className="group bg-gray-50 rounded-xl p-6 hover:bg-primary-50 transition-all duration-300 hover:shadow-lg">
                   <div className="flex items-start justify-between mb-4">
                     <div className="p-3 bg-primary-100 rounded-lg group-hover:bg-primary-600 transition-colors duration-300">
@@ -299,7 +295,7 @@ const Home: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {featuredProducts.map((product, index) => (
+              {featuredProducts.map((product) => (
                 <Link 
                   key={`${product.type}-${product.id}`} 
                   to={`/${product.type === 'frame' ? 'frames' : 'sunglasses'}/${product.id}`}

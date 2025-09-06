@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Sunglasses } from '../types/sunglasses';
-import { Eye, ShoppingCart, Info, Sun, Shield } from 'lucide-react';
+import { ShoppingCart, Info, Shield } from 'lucide-react';
 import ImageGallery from './ImageGallery';
 
 interface SunglassesCardProps {

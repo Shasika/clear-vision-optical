@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Upload, X, Plus, AlertCircle, CheckCircle, Image as ImageIcon, Camera } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { X, Plus, AlertCircle, CheckCircle, Camera } from 'lucide-react';
 import { dataService } from '../../services/dataService';
 
 interface ImageGalleryUploadProps {
