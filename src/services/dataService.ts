@@ -153,15 +153,21 @@ class DataService {
   private sunglassesCache: Sunglasses[] | null = null;
   private companyCache: CompanyData | null = null;
   private get apiBaseUrl(): string {
-    // Use current domain for API calls in production, localhost for development
+    // Use environment-specific API URLs
     if (typeof window !== 'undefined') {
-      // In production, assume API is on same domain with port 3001
-      // In development, use localhost:3001
       const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-      const baseUrl = isLocalhost 
-        ? 'http://localhost:3001'
-        : `${window.location.protocol}//${window.location.hostname}:3001`;
-      return `${baseUrl}/api`;
+      const isGitHubPages = window.location.hostname.includes('github.io');
+      
+      if (isLocalhost) {
+        // Development: use local backend
+        return 'http://localhost:3001/api';
+      } else if (isGitHubPages) {
+        // Production: GitHub Pages frontend + Render backend
+        return 'https://optical-api.onrender.com/api';
+      } else {
+        // Fallback for other production domains
+        return `${window.location.protocol}//${window.location.hostname}:3001/api`;
+      }
     }
     
     // Default fallback for development
