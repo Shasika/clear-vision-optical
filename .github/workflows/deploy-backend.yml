@@ -1,0 +1,67 @@
+name: Deploy Backend
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'server/**'
+      - '.github/workflows/deploy-backend.yml'
+  workflow_dispatch:
+
+jobs:
+  deploy-railway:
+    name: Deploy to Railway
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install backend dependencies
+      run: |
+        cd server
+        npm ci --only=production
+
+    - name: Test server build
+      run: |
+        cd server
+        node -c server.js
+
+    # Uncomment and configure when you have Railway setup
+    # - name: Deploy to Railway
+    #   uses: railwayapp/railway-deploy@v1.0.0
+    #   with:
+    #     railway_token: ${{ secrets.RAILWAY_TOKEN }}
+    #     service_name: optical-website-api
+
+    - name: Deploy preparation complete
+      run: |
+        echo "✅ Backend deployment preparation completed"
+        echo "📁 Server files ready for deployment:"
+        ls -la server/
+        echo "🔧 To complete deployment, configure your hosting service:"
+        echo "   - Railway: Set RAILWAY_TOKEN secret and uncomment Railway step"
+        echo "   - Render: Add render.yaml and set up Render service"
+        echo "   - Heroku: Add Procfile and set up Heroku app"
+
+  # Alternative deployment for Render.com
+  deploy-render:
+    name: Deploy to Render (Alternative)
+    runs-on: ubuntu-latest
+    if: false  # Set to true when ready to use Render
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Deploy to Render
+      uses: johnbeynon/render-deploy-action@v0.0.8
+      with:
+        service-id: ${{ secrets.RENDER_SERVICE_ID }}
+        api-key: ${{ secrets.RENDER_API_KEY }}
