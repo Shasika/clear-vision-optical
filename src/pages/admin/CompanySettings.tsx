@@ -18,6 +18,7 @@ import {
   Menu
 } from 'lucide-react';
 import { useCompanyData } from '../../hooks/useCompanyData';
+import { dataService } from '../../services/dataService';
 import ImageUpload from '../../components/admin/ImageUpload';
 
 const CompanySettings: React.FC = () => {
@@ -955,7 +956,6 @@ const CompanySettings: React.FC = () => {
                           currentImage={member?.image || ''}
                           folder="team"
                           onImageChange={(imageUrl) => handleTeamImageChange(index, imageUrl)}
-                          uniqueId={`team-member-${index}`}
                         />
                       </div>
                     </div>

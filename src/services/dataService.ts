@@ -195,7 +195,7 @@ class DataService {
         console.log('📱 Final fallback: Loading frames from localStorage');
         try {
           this.framesCache = JSON.parse(localData);
-          return this.framesCache;
+          return this.framesCache || [];
         } catch (parseError) {
           console.error('Failed to parse frames from localStorage:', parseError);
         }
@@ -417,7 +417,7 @@ class DataService {
         console.log('📱 Final fallback: Loading sunglasses from localStorage');
         try {
           this.sunglassesCache = JSON.parse(localData);
-          return this.sunglassesCache;
+          return this.sunglassesCache || [];
         } catch (parseError) {
           console.error('Failed to parse sunglasses from localStorage:', parseError);
         }

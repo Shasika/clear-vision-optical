@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowUpDown, ChevronUp, ChevronDown } from 'lucide-react';
 import type { SortConfig, SortOption } from '../../hooks/useSorting';
 

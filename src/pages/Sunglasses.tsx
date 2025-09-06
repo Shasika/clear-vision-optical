@@ -376,8 +376,8 @@ const Sunglasses: React.FC = () => {
                       onChange={(e) => {
                         const min = e.target.value ? Number(e.target.value) : undefined;
                         handleFilterChange('priceRange', {
-                          min,
-                          max: filters.priceRange?.max || 100000
+                          min: min ?? 0,
+                          max: filters.priceRange?.max ?? 100000
                         });
                       }}
                       className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm"
@@ -392,8 +392,8 @@ const Sunglasses: React.FC = () => {
                       onChange={(e) => {
                         const max = e.target.value ? Number(e.target.value) : undefined;
                         handleFilterChange('priceRange', {
-                          min: filters.priceRange?.min || 0,
-                          max
+                          min: filters.priceRange?.min ?? 0,
+                          max: max ?? 200000
                         });
                       }}
                       className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm"

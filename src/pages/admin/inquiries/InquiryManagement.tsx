@@ -40,7 +40,6 @@ const InquiryManagement: React.FC = () => {
       const data = await response.json();
       setInquiries(data);
     } catch (err) {
-      setError('Failed to load inquiries');
       console.error('Error fetching inquiries:', err);
     } finally {
       setLoading(false);

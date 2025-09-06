@@ -19,7 +19,7 @@ const Services: React.FC = () => {
       description: service.description,
       features: [], // Services from backend don't have features array
       price: typeof service.price === 'string' ? service.price : `LKR ${service.price.toLocaleString()}`,
-      duration: service.duration
+      ...(service.duration && { duration: service.duration })
     })) :
     [
       {
@@ -32,7 +32,8 @@ const Services: React.FC = () => {
           'Glaucoma screening',
           'Color vision testing'
         ],
-        price: 'From LKR 2,500'
+        price: 'From LKR 2,500',
+        duration: '45-60 minutes'
       },
       {
         icon: Glasses,
@@ -44,7 +45,8 @@ const Services: React.FC = () => {
           'Bifocal lenses',
           'Computer glasses'
         ],
-        price: 'From LKR 8,500'
+        price: 'From LKR 8,500',
+        duration: '30-45 minutes'
       },
       {
         icon: Settings,
@@ -56,7 +58,8 @@ const Services: React.FC = () => {
           'Temple adjustments',
           'Free maintenance'
         ],
-        price: 'Complimentary'
+        price: 'Complimentary',
+        duration: '15-20 minutes'
       },
       {
         icon: Shield,
@@ -68,7 +71,8 @@ const Services: React.FC = () => {
           'UV protection',
           'Blue light filtering'
         ],
-        price: 'From LKR 4,500'
+        price: 'From LKR 4,500',
+        duration: '20-30 minutes'
       }
     ];
 

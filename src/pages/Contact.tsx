@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { contactService } from '../services/contactService';
-import type { Contact } from '../types/contact';
+import type { Contact as ContactType } from '../types/contact';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -29,10 +29,9 @@ const Contact: React.FC = () => {
     }
 
     setSubmitting(true);
-    setSubmitStatus('idle');
     
     try {
-      const contactData: Omit<Contact, 'id' | 'createdAt' | 'updatedAt'> = {
+      const contactData: Omit<ContactType, 'id' | 'createdAt' | 'updatedAt'> = {
         customerInfo: {
           name: formData.name,
           email: formData.email,
@@ -50,14 +49,14 @@ const Contact: React.FC = () => {
 
       await contactService.addContact(contactData);
       
-      setSubmitStatus('success');
+      // Contact submitted successfully
       setFormData({ name: '', email: '', phone: '', service: '', message: '' });
       
       // Show success message
       alert('Thank you for your message! We will get back to you soon.');
     } catch (error) {
       console.error('Error submitting contact form:', error);
-      setSubmitStatus('error');
+      // Error occurred during submission
       alert('Sorry, there was an error sending your message. Please try again.');
     } finally {
       setSubmitting(false);

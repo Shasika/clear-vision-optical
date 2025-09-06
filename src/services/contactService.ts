@@ -45,7 +45,7 @@ class ContactService {
       console.log('📱 Loading contacts from localStorage');
       try {
         this.contactsCache = JSON.parse(localData);
-        return this.contactsCache;
+        return this.contactsCache || [];
       } catch (error) {
         console.error('Failed to parse contacts from localStorage:', error);
       }
