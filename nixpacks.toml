@@ -1,20 +1,26 @@
 [variables]
 NODE_ENV = 'production'
+PORT = '$PORT'
 
 [phases.setup]
-nixPkgs = ['nodejs', 'npm']
+nixPkgs = ['nodejs-18_x', 'npm']
+cmds = [
+  'echo "🚀 Setting up Railway deployment for backend only..."',
+  'echo "Frontend is deployed separately on GitHub Pages"'
+]
 
 [phases.install]
 cmds = [
-  'echo "Installing server dependencies..."',
-  'cd server',
-  'npm ci --only=production'
+  'echo "📦 Installing server dependencies..."',
+  'cd server && ls -la',
+  'cd server && npm ci --only=production',
+  'echo "✅ Server dependencies installed"'
 ]
 
 [phases.build]
 cmds = [
-  'echo "No build step needed - this is a Node.js server"',
-  'echo "Skipping frontend build - only deploying backend"'
+  'echo "🔧 No build step needed - this is a Node.js server"',
+  'echo "✅ Skipping frontend build - backend ready to deploy"'
 ]
 
 [start]
