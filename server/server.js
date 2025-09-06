@@ -11,12 +11,12 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json({ limit: '10mb' }));
 
-// Serve static files from the public directory
-app.use('/images', express.static(path.join(__dirname, '..', 'public', 'images')));
+// Serve static files from the server images directory
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
-// Paths to JSON files and images
-const DATA_DIR = path.join(__dirname, '..', 'public', 'data');
-const IMAGES_DIR = path.join(__dirname, '..', 'public', 'images');
+// Paths to JSON files and images - all relative to server directory
+const DATA_DIR = path.join(__dirname, 'data');
+const IMAGES_DIR = path.join(__dirname, 'images');
 const FRAMES_FILE = path.join(__dirname, 'data', 'frames.json');
 const SUNGLASSES_FILE = path.join(__dirname, 'data', 'sunglasses.json');
 const COMPANY_FILE = path.join(__dirname, 'data', 'company.json');
