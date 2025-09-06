@@ -5,12 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "echo 'Skipping frontend build - this deployment is for backend only. Frontend is deployed separately on GitHub Pages.'",
-    "build:frontend": "tsc -b && vite build",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "railway:build": "cd server && npm ci --only=production",
-    "railway:start": "cd server && npm start"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@types/react-router-dom": "^5.3.3",
