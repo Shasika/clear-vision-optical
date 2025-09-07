@@ -19,5 +19,509 @@
     "priority": "medium",
     "createdAt": "2025-09-04T19:13:52.373Z",
     "updatedAt": "2025-09-04T19:13:52.373Z"
+  },
+  {
+    "id": "INQ-1757013232374-a123b456c",
+    "customerInfo": {
+      "name": "Sarah Mitchell",
+      "email": "sarah.mitchell@email.com",
+      "phone": "+94 77 234 5678"
+    },
+    "product": {
+      "id": "sg-003",
+      "name": "Oakley Frogskins",
+      "brand": "Oakley",
+      "type": "sunglasses",
+      "price": 16500,
+      "imageUrl": ""
+    },
+    "message": "I'm looking for sunglasses for outdoor activities. Are these suitable for sports?",
+    "status": "new",
+    "priority": "medium",
+    "createdAt": "2025-01-05T10:30:00.000Z",
+    "updatedAt": "2025-01-05T10:30:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232375-b234c567d",
+    "customerInfo": {
+      "name": "Michael Johnson",
+      "email": "m.johnson@company.com",
+      "phone": "+94 71 345 6789"
+    },
+    "product": {
+      "id": "frame-004",
+      "name": "Tom Ford Classic Rectangle",
+      "brand": "Tom Ford",
+      "type": "frame",
+      "price": 32000,
+      "imageUrl": ""
+    },
+    "message": "Interested in prescription lenses for these frames. What's the total cost including lenses?",
+    "status": "contacted",
+    "priority": "high",
+    "createdAt": "2025-01-05T11:15:00.000Z",
+    "updatedAt": "2025-01-05T14:20:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232376-c345d678e",
+    "customerInfo": {
+      "name": "Emma Wilson",
+      "email": "emma.wilson@gmail.com",
+      "phone": "+94 76 456 7890"
+    },
+    "product": {
+      "id": "sg-007",
+      "name": "Prada Square Classic",
+      "brand": "Prada",
+      "type": "sunglasses",
+      "price": 28000,
+      "imageUrl": ""
+    },
+    "message": "Do you have this model available in different colors? Looking for something in blue or green.",
+    "status": "new",
+    "priority": "medium",
+    "createdAt": "2025-01-05T12:45:00.000Z",
+    "updatedAt": "2025-01-05T12:45:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232377-d456e789f",
+    "customerInfo": {
+      "name": "David Brown",
+      "email": "david.brown@outlook.com",
+      "phone": "+94 75 567 8901"
+    },
+    "product": {
+      "id": "frame-005",
+      "name": "Persol Round Vintage",
+      "brand": "Persol",
+      "type": "frame",
+      "price": 28500,
+      "imageUrl": ""
+    },
+    "message": "Can I try these frames before purchasing? Do you have a physical store location?",
+    "status": "responded",
+    "priority": "medium",
+    "createdAt": "2025-01-05T13:30:00.000Z",
+    "updatedAt": "2025-01-05T16:45:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232378-e567f890g",
+    "customerInfo": {
+      "name": "Lisa Chen",
+      "email": "lisa.chen@email.com",
+      "phone": "+94 77 678 9012"
+    },
+    "product": {
+      "id": "sg-009",
+      "name": "Gucci Round Frame",
+      "brand": "Gucci",
+      "type": "sunglasses",
+      "price": 32000,
+      "imageUrl": ""
+    },
+    "message": "Is this product authentic? Can you provide authenticity certificate?",
+    "status": "new",
+    "priority": "high",
+    "createdAt": "2025-01-05T14:00:00.000Z",
+    "updatedAt": "2025-01-05T14:00:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232379-f678g901h",
+    "customerInfo": {
+      "name": "James Taylor",
+      "email": "james.taylor@company.com",
+      "phone": "+94 71 789 0123"
+    },
+    "product": {
+      "id": "frame-009",
+      "name": "Hugo Boss Professional",
+      "brand": "Hugo Boss",
+      "type": "frame",
+      "price": 22000,
+      "imageUrl": ""
+    },
+    "message": "Need professional frames for office wear. Do these come with anti-glare coating?",
+    "status": "contacted",
+    "priority": "medium",
+    "createdAt": "2025-01-05T15:20:00.000Z",
+    "updatedAt": "2025-01-05T17:30:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232380-g789h012i",
+    "customerInfo": {
+      "name": "Anna Rodriguez",
+      "email": "anna.rodriguez@gmail.com",
+      "phone": "+94 76 890 1234"
+    },
+    "product": {
+      "id": "sg-011",
+      "name": "Versace Medusa",
+      "brand": "Versace",
+      "type": "sunglasses",
+      "price": 29500,
+      "imageUrl": ""
+    },
+    "message": "Love the design! What's the delivery time to Colombo area?",
+    "status": "responded",
+    "priority": "medium",
+    "createdAt": "2025-01-05T16:10:00.000Z",
+    "updatedAt": "2025-01-05T18:15:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232381-h890i123j",
+    "customerInfo": {
+      "name": "Robert Kumar",
+      "email": "robert.kumar@email.com",
+      "phone": "+94 75 901 2345"
+    },
+    "product": {
+      "id": "frame-010",
+      "name": "Emporio Armani Modern",
+      "brand": "Emporio Armani",
+      "type": "frame",
+      "price": 25500,
+      "imageUrl": ""
+    },
+    "message": "Interested in titanium frames. Are these hypoallergenic?",
+    "status": "new",
+    "priority": "low",
+    "createdAt": "2025-01-05T17:30:00.000Z",
+    "updatedAt": "2025-01-05T17:30:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232382-i901j234k",
+    "customerInfo": {
+      "name": "Michelle Davis",
+      "email": "michelle.davis@outlook.com",
+      "phone": "+94 77 012 3456"
+    },
+    "product": {
+      "id": "sg-015",
+      "name": "Marc Jacobs Round Vintage",
+      "brand": "Marc Jacobs",
+      "type": "sunglasses",
+      "price": 17500,
+      "imageUrl": ""
+    },
+    "message": "Perfect vintage style! Do you offer prescription lenses for sunglasses?",
+    "status": "contacted",
+    "priority": "medium",
+    "createdAt": "2025-01-05T18:45:00.000Z",
+    "updatedAt": "2025-01-05T20:00:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232383-j012k345l",
+    "customerInfo": {
+      "name": "Kevin Wang",
+      "email": "kevin.wang@company.com",
+      "phone": "+94 71 123 4567"
+    },
+    "product": {
+      "id": "frame-019",
+      "name": "Calvin Klein Minimalist",
+      "brand": "Calvin Klein",
+      "type": "frame",
+      "price": 21000,
+      "imageUrl": ""
+    },
+    "message": "Looking for minimalist design for daily wear. Is this comfortable for long hours?",
+    "status": "new",
+    "priority": "medium",
+    "createdAt": "2025-01-05T19:20:00.000Z",
+    "updatedAt": "2025-01-05T19:20:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232384-k123l456m",
+    "customerInfo": {
+      "name": "Sophia Lee",
+      "email": "sophia.lee@gmail.com",
+      "phone": "+94 76 234 5678"
+    },
+    "product": {
+      "id": "sg-020",
+      "name": "Emporio Armani Cat Eye",
+      "brand": "Emporio Armani",
+      "type": "sunglasses",
+      "price": 25500,
+      "imageUrl": ""
+    },
+    "message": "Elegant cat-eye design! What UV protection level do these offer?",
+    "status": "responded",
+    "priority": "medium",
+    "createdAt": "2025-01-05T20:15:00.000Z",
+    "updatedAt": "2025-01-05T21:30:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232385-l234m567n",
+    "customerInfo": {
+      "name": "Thomas Anderson",
+      "email": "thomas.anderson@email.com",
+      "phone": "+94 75 345 6789"
+    },
+    "product": {
+      "id": "frame-022",
+      "name": "Michael Kors Glamour",
+      "brand": "Michael Kors",
+      "type": "frame",
+      "price": 19500,
+      "imageUrl": ""
+    },
+    "message": "Is this suitable for men or women? Looking for unisex options.",
+    "status": "new",
+    "priority": "low",
+    "createdAt": "2025-01-06T09:00:00.000Z",
+    "updatedAt": "2025-01-06T09:00:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232386-m345n678o",
+    "customerInfo": {
+      "name": "Rachel Green",
+      "email": "rachel.green@outlook.com",
+      "phone": "+94 77 456 7890"
+    },
+    "product": {
+      "id": "sg-022",
+      "name": "Randolph Engineering Aviator",
+      "brand": "Randolph",
+      "type": "sunglasses",
+      "price": 27500,
+      "imageUrl": ""
+    },
+    "message": "Military-grade sounds impressive! Are these impact resistant?",
+    "status": "contacted",
+    "priority": "high",
+    "createdAt": "2025-01-06T10:30:00.000Z",
+    "updatedAt": "2025-01-06T12:45:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232387-n456o789p",
+    "customerInfo": {
+      "name": "Mark Thompson",
+      "email": "mark.thompson@company.com",
+      "phone": "+94 71 567 8901"
+    },
+    "product": {
+      "id": "frame-025",
+      "name": "Montblanc Executive",
+      "brand": "Montblanc",
+      "type": "frame",
+      "price": 38500,
+      "imageUrl": ""
+    },
+    "message": "Premium executive frames for business meetings. What warranty do you provide?",
+    "status": "responded",
+    "priority": "high",
+    "createdAt": "2025-01-06T11:15:00.000Z",
+    "updatedAt": "2025-01-06T14:20:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232388-o567p890q",
+    "customerInfo": {
+      "name": "Jennifer Adams",
+      "email": "jennifer.adams@gmail.com",
+      "phone": "+94 76 678 9012"
+    },
+    "product": {
+      "id": "sg-025",
+      "name": "Wiley X Valor",
+      "brand": "Wiley X",
+      "type": "sunglasses",
+      "price": 18500,
+      "imageUrl": ""
+    },
+    "message": "Need safety-rated sunglasses for outdoor work. ANSI certified sounds perfect!",
+    "status": "new",
+    "priority": "high",
+    "createdAt": "2025-01-06T12:00:00.000Z",
+    "updatedAt": "2025-01-06T12:00:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232389-p678q901r",
+    "customerInfo": {
+      "name": "Christopher Liu",
+      "email": "chris.liu@email.com",
+      "phone": "+94 75 789 0123"
+    },
+    "product": {
+      "id": "frame-026",
+      "name": "Kate Spade Feminine Round",
+      "brand": "Kate Spade",
+      "type": "frame",
+      "price": 16500,
+      "imageUrl": ""
+    },
+    "message": "Buying as a gift for my wife. Do you offer gift wrapping services?",
+    "status": "contacted",
+    "priority": "medium",
+    "createdAt": "2025-01-06T13:30:00.000Z",
+    "updatedAt": "2025-01-06T15:45:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232390-q789r012s",
+    "customerInfo": {
+      "name": "Amanda White",
+      "email": "amanda.white@outlook.com",
+      "phone": "+94 77 890 1234"
+    },
+    "product": {
+      "id": "sg-024",
+      "name": "Serengeti Drivers",
+      "brand": "Serengeti",
+      "type": "sunglasses",
+      "price": 23000,
+      "imageUrl": ""
+    },
+    "message": "Photochromic lenses for driving - exactly what I need! How do they perform in different light conditions?",
+    "status": "responded",
+    "priority": "medium",
+    "createdAt": "2025-01-06T14:15:00.000Z",
+    "updatedAt": "2025-01-06T16:30:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232391-r890s123t",
+    "customerInfo": {
+      "name": "Daniel Martinez",
+      "email": "daniel.martinez@company.com",
+      "phone": "+94 71 901 2345"
+    },
+    "product": {
+      "id": "frame-027",
+      "name": "DKNY Urban Rectangle",
+      "brand": "DKNY",
+      "type": "frame",
+      "price": 18000,
+      "imageUrl": ""
+    },
+    "message": "Urban style appeals to me. Are these suitable for progressive lenses?",
+    "status": "new",
+    "priority": "medium",
+    "createdAt": "2025-01-06T15:45:00.000Z",
+    "updatedAt": "2025-01-06T15:45:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232392-s901t234u",
+    "customerInfo": {
+      "name": "Rebecca Garcia",
+      "email": "rebecca.garcia@gmail.com",
+      "phone": "+94 76 012 3456"
+    },
+    "product": {
+      "id": "sg-021",
+      "name": "Specsavers Classic",
+      "brand": "Specsavers",
+      "type": "sunglasses",
+      "price": 6500,
+      "imageUrl": ""
+    },
+    "message": "Great value for money! Do you have bulk discount for multiple pairs?",
+    "status": "contacted",
+    "priority": "low",
+    "createdAt": "2025-01-06T16:20:00.000Z",
+    "updatedAt": "2025-01-06T17:45:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232393-t012u345v",
+    "customerInfo": {
+      "name": "Steven Wilson",
+      "email": "steven.wilson@email.com",
+      "phone": "+94 75 123 4567"
+    },
+    "product": {
+      "id": "frame-018",
+      "name": "Specsavers Essential",
+      "brand": "Specsavers",
+      "type": "frame",
+      "price": 7500,
+      "imageUrl": ""
+    },
+    "message": "Budget-friendly option for daily wear. What lens options are available?",
+    "status": "responded",
+    "priority": "medium",
+    "createdAt": "2025-01-06T17:00:00.000Z",
+    "updatedAt": "2025-01-06T18:30:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232394-u123v456w",
+    "customerInfo": {
+      "name": "Patricia Moore",
+      "email": "patricia.moore@outlook.com",
+      "phone": "+94 77 234 5678"
+    },
+    "product": {
+      "id": "sg-018",
+      "name": "Bolle Bolt",
+      "brand": "Bolle",
+      "type": "sunglasses",
+      "price": 16000,
+      "imageUrl": ""
+    },
+    "message": "Perfect for cycling! Are these anti-fog and do they stay secure during sports?",
+    "status": "new",
+    "priority": "medium",
+    "createdAt": "2025-01-06T18:30:00.000Z",
+    "updatedAt": "2025-01-06T18:30:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232395-v234w567x",
+    "customerInfo": {
+      "name": "George Clark",
+      "email": "george.clark@company.com",
+      "phone": "+94 71 345 6789"
+    },
+    "product": {
+      "id": "frame-024",
+      "name": "Burberry Classic Plaid",
+      "brand": "Burberry",
+      "type": "frame",
+      "price": 27500,
+      "imageUrl": ""
+    },
+    "message": "British elegance at its finest! Is the plaid pattern subtle or prominent?",
+    "status": "contacted",
+    "priority": "high",
+    "createdAt": "2025-01-06T19:15:00.000Z",
+    "updatedAt": "2025-01-06T20:30:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232396-w345x678y",
+    "customerInfo": {
+      "name": "Nancy Lewis",
+      "email": "nancy.lewis@gmail.com",
+      "phone": "+94 76 456 7890"
+    },
+    "product": {
+      "id": "sg-027",
+      "name": "Revo Bono",
+      "brand": "Revo",
+      "type": "sunglasses",
+      "price": 20500,
+      "imageUrl": ""
+    },
+    "message": "Crystal-clear optics sounds amazing! What makes Revo lenses special?",
+    "status": "responded",
+    "priority": "medium",
+    "createdAt": "2025-01-06T20:00:00.000Z",
+    "updatedAt": "2025-01-06T21:15:00.000Z"
+  },
+  {
+    "id": "INQ-1757013232397-x456y789z",
+    "customerInfo": {
+      "name": "Richard Hall",
+      "email": "richard.hall@email.com",
+      "phone": "+94 75 567 8901"
+    },
+    "product": {
+      "id": "frame-028",
+      "name": "Oakley Sport Prescription",
+      "brand": "Oakley",
+      "type": "frame",
+      "price": 20500,
+      "imageUrl": ""
+    },
+    "message": "Sport prescription frames - exactly what I need for active lifestyle! Are these impact resistant?",
+    "status": "new",
+    "priority": "high",
+    "createdAt": "2025-01-06T21:30:00.000Z",
+    "updatedAt": "2025-01-06T21:30:00.000Z"
   }
 ]

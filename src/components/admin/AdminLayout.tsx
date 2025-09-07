@@ -12,7 +12,8 @@ import {
   Settings,
   User,
   Mail,
-  MessageSquare
+  MessageSquare,
+  Database
 } from 'lucide-react';
 import { useAdmin } from '../../hooks/useAdmin';
 
@@ -32,6 +33,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
     { name: 'Sunglasses', href: '/admin/sunglasses', icon: Sun },
     { name: 'Inquiries', href: '/admin/inquiries', icon: Mail },
     { name: 'Contacts', href: '/admin/contacts', icon: MessageSquare },
+    { name: 'Data Management', href: '/admin/data', icon: Database },
     { name: 'Company Settings', href: '/admin/company', icon: Settings },
   ];
 

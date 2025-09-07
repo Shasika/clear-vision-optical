@@ -697,6 +697,127 @@ app.get('/api/contacts/stats', async (req, res) => {
   }
 });
 
+// JSON Data Management Routes
+
+// Get list of available JSON files
+app.get('/api/data/files', async (req, res) => {
+  try {
+    const files = [
+      { name: 'company.json', path: COMPANY_FILE },
+      { name: 'frames.json', path: FRAMES_FILE },
+      { name: 'sunglasses.json', path: SUNGLASSES_FILE },
+      { name: 'contacts.json', path: CONTACTS_FILE },
+      { name: 'inquiries.json', path: INQUIRIES_FILE }
+    ];
+    
+    const fileList = [];
+    
+    for (const file of files) {
+      try {
+        const stats = await fs.stat(file.path);
+        fileList.push({
+          name: file.name,
+          path: file.path,
+          size: stats.size,
+          lastModified: stats.mtime.toISOString()
+        });
+      } catch (error) {
+        console.warn(`File not found: ${file.name}`);
+        fileList.push({
+          name: file.name,
+          path: file.path,
+          size: 0,
+          lastModified: new Date().toISOString()
+        });
+      }
+    }
+    
+    console.log('📋 Data files list requested');
+    res.json(fileList);
+  } catch (error) {
+    console.error('Error listing data files:', error);
+    res.status(500).json({ error: 'Failed to list data files' });
+  }
+});
+
+// Get specific JSON file content
+app.get('/api/data/files/:filename', async (req, res) => {
+  try {
+    const { filename } = req.params;
+    
+    // Map filename to actual file path
+    const fileMap = {
+      'company.json': COMPANY_FILE,
+      'frames.json': FRAMES_FILE,
+      'sunglasses.json': SUNGLASSES_FILE,
+      'contacts.json': CONTACTS_FILE,
+      'inquiries.json': INQUIRIES_FILE
+    };
+    
+    const filePath = fileMap[filename];
+    
+    if (!filePath) {
+      return res.status(404).json({ error: 'File not found' });
+    }
+    
+    const data = await readJSONFile(filePath);
+    
+    if (data === null) {
+      return res.status(500).json({ error: 'Failed to read file' });
+    }
+    
+    console.log(`📄 Data file loaded: ${filename}`);
+    res.json(data);
+  } catch (error) {
+    console.error('Error loading data file:', error);
+    res.status(500).json({ error: 'Failed to load file' });
+  }
+});
+
+// Update specific JSON file content
+app.put('/api/data/files/:filename', async (req, res) => {
+  try {
+    const { filename } = req.params;
+    const newData = req.body;
+    
+    // Map filename to actual file path
+    const fileMap = {
+      'company.json': COMPANY_FILE,
+      'frames.json': FRAMES_FILE,
+      'sunglasses.json': SUNGLASSES_FILE,
+      'contacts.json': CONTACTS_FILE,
+      'inquiries.json': INQUIRIES_FILE
+    };
+    
+    const filePath = fileMap[filename];
+    
+    if (!filePath) {
+      return res.status(404).json({ error: 'File not found' });
+    }
+    
+    // Validate JSON data
+    if (!newData || (typeof newData !== 'object' && !Array.isArray(newData))) {
+      return res.status(400).json({ error: 'Invalid JSON data' });
+    }
+    
+    // Write the file
+    const success = await writeJSONFile(filePath, newData);
+    
+    if (success) {
+      console.log(`💾 Data file updated: ${filename}`);
+      res.json({ 
+        success: true, 
+        message: `${filename} updated successfully`
+      });
+    } else {
+      res.status(500).json({ error: 'Failed to save file' });
+    }
+  } catch (error) {
+    console.error('Error updating data file:', error);
+    res.status(500).json({ error: 'Failed to update file' });
+  }
+});
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   res.json({ 
@@ -733,6 +854,9 @@ async function startServer() {
     console.log(`   PUT  /api/contacts/:id - Update contact`);
     console.log(`   DELETE /api/contacts/:id - Delete contact`);
     console.log(`   GET  /api/contacts/stats - Get contact statistics`);
+    console.log(`   GET  /api/data/files   - List JSON data files`);
+    console.log(`   GET  /api/data/files/:name - Load JSON file content`);
+    console.log(`   PUT  /api/data/files/:name - Update JSON file content`);
     console.log(`   GET  /api/health       - Health check`);
   });
 }

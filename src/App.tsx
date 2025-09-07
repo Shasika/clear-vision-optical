@@ -22,6 +22,7 @@ import SunglassesForm from './pages/admin/sunglasses/SunglassesForm';
 import CompanySettings from './pages/admin/CompanySettings';
 import InquiryManagement from './pages/admin/inquiries/InquiryManagement';
 import ContactManagement from './pages/admin/contacts/ContactManagement';
+import DataManagement from './pages/admin/DataManagement';
 
 function App() {
   return (
@@ -140,6 +141,13 @@ function App() {
             <ProtectedRoute>
               <AdminLayout>
                 <ContactManagement />
+              </AdminLayout>
+            </ProtectedRoute>
+          } />
+          <Route path="/admin/data" element={
+            <ProtectedRoute>
+              <AdminLayout>
+                <DataManagement />
               </AdminLayout>
             </ProtectedRoute>
           } />

@@ -7,6 +7,8 @@ import type { SortOption } from '../../../hooks/useSorting';
 import Pagination from '../../../components/admin/Pagination';
 import SortableTableHeader from '../../../components/admin/SortableTableHeader';
 import SortingControls from '../../../components/admin/SortingControls';
+import CustomDropdown from '../../../components/CustomDropdown';
+import InlineDropdown from '../../../components/InlineDropdown';
 
 const InquiryManagement: React.FC = () => {
   const [inquiries, setInquiries] = useState<Inquiry[]>([]);
@@ -327,51 +329,54 @@ const InquiryManagement: React.FC = () => {
           <div className="mt-4 pt-4 border-t border-gray-200 grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Status</label>
-              <select
+              <CustomDropdown
                 value={filters.status || ''}
-                onChange={(e) => setFilters({ ...filters, status: e.target.value || undefined })}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-              >
-                <option value="">All Statuses</option>
-                <option value="new">New</option>
-                <option value="in-progress">In Progress</option>
-                <option value="contacted">Contacted</option>
-                <option value="quoted">Quoted</option>
-                <option value="completed">Completed</option>
-                <option value="cancelled">Cancelled</option>
-              </select>
+                onChange={(value) => setFilters({ ...filters, status: value === '' ? undefined : value as Inquiry['status'] })}
+                options={[
+                  { value: '', label: 'All Statuses' },
+                  { value: 'new', label: 'New' },
+                  { value: 'in-progress', label: 'In Progress' },
+                  { value: 'contacted', label: 'Contacted' },
+                  { value: 'quoted', label: 'Quoted' },
+                  { value: 'completed', label: 'Completed' },
+                  { value: 'cancelled', label: 'Cancelled' }
+                ]}
+                className="w-full focus:ring-primary-500"
+              />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Priority</label>
-              <select
+              <CustomDropdown
                 value={filters.priority || ''}
-                onChange={(e) => setFilters({ ...filters, priority: e.target.value || undefined })}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-              >
-                <option value="">All Priorities</option>
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
-              </select>
+                onChange={(value) => setFilters({ ...filters, priority: value === '' ? undefined : value as Inquiry['priority'] })}
+                options={[
+                  { value: '', label: 'All Priorities' },
+                  { value: 'low', label: 'Low' },
+                  { value: 'medium', label: 'Medium' },
+                  { value: 'high', label: 'High' }
+                ]}
+                className="w-full focus:ring-primary-500"
+              />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Product Type</label>
-              <select
+              <CustomDropdown
                 value={filters.productType || ''}
-                onChange={(e) => setFilters({ ...filters, productType: (e.target.value as 'frame' | 'sunglasses') || undefined })}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-              >
-                <option value="">All Types</option>
-                <option value="frame">Frames</option>
-                <option value="sunglasses">Sunglasses</option>
-              </select>
+                onChange={(value) => setFilters({ ...filters, productType: value === '' ? undefined : value as 'frame' | 'sunglasses' })}
+                options={[
+                  { value: '', label: 'All Types' },
+                  { value: 'frame', label: 'Frames' },
+                  { value: 'sunglasses', label: 'Sunglasses' }
+                ]}
+                className="w-full focus:ring-primary-500"
+              />
             </div>
           </div>
         )}
       </div>
 
       {/* Inquiries Table */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-visible">
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
@@ -449,29 +454,31 @@ const InquiryManagement: React.FC = () => {
                     </div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <select
+                    <InlineDropdown
                       value={inquiry.status}
-                      onChange={(e) => handleStatusChange(inquiry.id, e.target.value)}
-                      className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border-0 focus:ring-2 focus:ring-primary-500 ${statusColors[inquiry.status]}`}
-                    >
-                      <option value="new">New</option>
-                      <option value="in-progress">In Progress</option>
-                      <option value="contacted">Contacted</option>
-                      <option value="quoted">Quoted</option>
-                      <option value="completed">Completed</option>
-                      <option value="cancelled">Cancelled</option>
-                    </select>
+                      onChange={(value) => handleStatusChange(inquiry.id, value as string)}
+                      options={[
+                        { value: 'new', label: 'New' },
+                        { value: 'in-progress', label: 'In Progress' },
+                        { value: 'contacted', label: 'Contacted' },
+                        { value: 'quoted', label: 'Quoted' },
+                        { value: 'completed', label: 'Completed' },
+                        { value: 'cancelled', label: 'Cancelled' }
+                      ]}
+                      buttonClassName={statusColors[inquiry.status]}
+                    />
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <select
+                    <InlineDropdown
                       value={inquiry.priority}
-                      onChange={(e) => handlePriorityChange(inquiry.id, e.target.value)}
-                      className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border-0 focus:ring-2 focus:ring-primary-500 ${priorityColors[inquiry.priority]}`}
-                    >
-                      <option value="low">Low</option>
-                      <option value="medium">Medium</option>
-                      <option value="high">High</option>
-                    </select>
+                      onChange={(value) => handlePriorityChange(inquiry.id, value as string)}
+                      options={[
+                        { value: 'low', label: 'Low' },
+                        { value: 'medium', label: 'Medium' },
+                        { value: 'high', label: 'High' }
+                      ]}
+                      buttonClassName={priorityColors[inquiry.priority]}
+                    />
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                     {formatDate(inquiry.createdAt)}

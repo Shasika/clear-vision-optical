@@ -20,6 +20,7 @@ import {
 import { useCompanyData } from '../../hooks/useCompanyData';
 import { dataService } from '../../services/dataService';
 import ImageUpload from '../../components/admin/ImageUpload';
+import CustomDropdown from '../../components/CustomDropdown';
 
 const CompanySettings: React.FC = () => {
   const { companyData, loading, error, updateCompanyInfo, updateContactInfo, updateBusinessHours, updateFeatures, updateAboutPage, updateFooter, updateHomePage, updateContactPage, updateSiteContent } = useCompanyData();
@@ -404,17 +405,15 @@ const CompanySettings: React.FC = () => {
       <div className="border-b border-gray-200">
         {/* Mobile Dropdown */}
         <div className="sm:hidden">
-          <select
+          <CustomDropdown
             value={activeTab}
-            onChange={(e) => setActiveTab(e.target.value as 'company' | 'contact' | 'hours' | 'services' | 'features' | 'about' | 'footer' | 'homepage' | 'contactpage' | 'navigation')}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-primary-500 focus:border-primary-500 bg-white"
-          >
-            {tabs.map((tab) => (
-              <option key={tab.id} value={tab.id}>
-                {tab.name}
-              </option>
-            ))}
-          </select>
+            onChange={(value) => setActiveTab(value as 'company' | 'contact' | 'hours' | 'services' | 'features' | 'about' | 'footer' | 'homepage' | 'contactpage' | 'navigation')}
+            options={tabs.map((tab) => ({
+              value: tab.id,
+              label: tab.name
+            }))}
+            className="w-full focus:ring-primary-500"
+          />
         </div>
         
         {/* Desktop/Tablet Tabs */}

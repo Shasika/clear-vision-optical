@@ -1,5 +1,6 @@
 import { ArrowUpDown, ChevronUp, ChevronDown } from 'lucide-react';
 import type { SortConfig, SortOption } from '../../hooks/useSorting';
+import CustomDropdown from '../CustomDropdown';
 
 interface SortingControlsProps<T> {
   sortConfig: SortConfig<T>;
@@ -23,23 +24,21 @@ function SortingControls<T>({
         <span className="text-sm text-gray-600">Sort:</span>
       </div>
       
-      <select
+      <CustomDropdown
         value={sortOptions.findIndex(opt => opt.key === sortConfig.key)}
-        onChange={(e) => {
-          const selectedIndex = parseInt(e.target.value);
+        onChange={(value) => {
+          const selectedIndex = parseInt(value.toString());
           const selectedOption = sortOptions[selectedIndex];
           if (selectedOption) {
             onSortKeyChange(selectedOption.key);
           }
         }}
-        className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white"
-      >
-        {sortOptions.map((option, index) => (
-          <option key={`${String(option.key)}-${option.label}-${index}`} value={index.toString()}>
-            {option.label}
-          </option>
-        ))}
-      </select>
+        options={sortOptions.map((option, index) => ({
+          value: index,
+          label: option.label
+        }))}
+        className="min-w-[140px] focus:ring-primary-500"
+      />
       
       <button
         onClick={onSortOrderToggle}

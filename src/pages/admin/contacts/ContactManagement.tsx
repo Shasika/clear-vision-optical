@@ -8,6 +8,8 @@ import type { SortOption } from '../../../hooks/useSorting';
 import Pagination from '../../../components/admin/Pagination';
 import SortableTableHeader from '../../../components/admin/SortableTableHeader';
 import SortingControls from '../../../components/admin/SortingControls';
+import CustomDropdown from '../../../components/CustomDropdown';
+import InlineDropdown from '../../../components/InlineDropdown';
 
 const ContactManagement: React.FC = () => {
   const [contacts, setContacts] = useState<Contact[]>([]);
@@ -261,42 +263,45 @@ const ContactManagement: React.FC = () => {
 
         {showFilters && (
           <div className="mt-4 grid grid-cols-1 md:grid-cols-4 gap-4 pt-4 border-t">
-            <select
-              className="border border-gray-300 rounded-md px-3 py-2"
+            <CustomDropdown
               value={filters.status || ''}
-              onChange={(e) => setFilters(prev => ({ ...prev, status: e.target.value || undefined }))}
-            >
-              <option value="">All Statuses</option>
-              <option value="new">New</option>
-              <option value="in-progress">In Progress</option>
-              <option value="contacted">Contacted</option>
-              <option value="scheduled">Scheduled</option>
-              <option value="completed">Completed</option>
-              <option value="cancelled">Cancelled</option>
-            </select>
+              onChange={(value) => setFilters(prev => ({ ...prev, status: value === '' ? undefined : value as Contact['status'] }))}
+              options={[
+                { value: '', label: 'All Statuses' },
+                { value: 'new', label: 'New' },
+                { value: 'in-progress', label: 'In Progress' },
+                { value: 'contacted', label: 'Contacted' },
+                { value: 'scheduled', label: 'Scheduled' },
+                { value: 'completed', label: 'Completed' },
+                { value: 'cancelled', label: 'Cancelled' }
+              ]}
+              className="focus:ring-primary-500"
+            />
 
-            <select
-              className="border border-gray-300 rounded-md px-3 py-2"
+            <CustomDropdown
               value={filters.priority || ''}
-              onChange={(e) => setFilters(prev => ({ ...prev, priority: e.target.value || undefined }))}
-            >
-              <option value="">All Priorities</option>
-              <option value="low">Low</option>
-              <option value="medium">Medium</option>
-              <option value="high">High</option>
-            </select>
+              onChange={(value) => setFilters(prev => ({ ...prev, priority: value === '' ? undefined : value as Contact['priority'] }))}
+              options={[
+                { value: '', label: 'All Priorities' },
+                { value: 'low', label: 'Low' },
+                { value: 'medium', label: 'Medium' },
+                { value: 'high', label: 'High' }
+              ]}
+              className="focus:ring-primary-500"
+            />
 
-            <select
-              className="border border-gray-300 rounded-md px-3 py-2"
+            <CustomDropdown
               value={filters.source || ''}
-              onChange={(e) => setFilters(prev => ({ ...prev, source: e.target.value || undefined }))}
-            >
-              <option value="">All Sources</option>
-              <option value="contact-form">Contact Form</option>
-              <option value="phone">Phone</option>
-              <option value="walk-in">Walk-in</option>
-              <option value="referral">Referral</option>
-            </select>
+              onChange={(value) => setFilters(prev => ({ ...prev, source: value === '' ? undefined : value as Contact['source'] }))}
+              options={[
+                { value: '', label: 'All Sources' },
+                { value: 'contact-form', label: 'Contact Form' },
+                { value: 'phone', label: 'Phone' },
+                { value: 'walk-in', label: 'Walk-in' },
+                { value: 'referral', label: 'Referral' }
+              ]}
+              className="focus:ring-primary-500"
+            />
 
             <button
               onClick={() => setFilters({})}
@@ -309,7 +314,7 @@ const ContactManagement: React.FC = () => {
       </div>
 
       {/* Contacts Table */}
-      <div className="bg-white rounded-lg shadow overflow-hidden">
+      <div className="bg-white rounded-lg shadow overflow-visible">
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
@@ -374,29 +379,31 @@ const ContactManagement: React.FC = () => {
                     <div className="text-sm text-gray-900">{contact.serviceInterest}</div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <select
-                      className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border-0 ${statusColors[contact.status]}`}
+                    <InlineDropdown
                       value={contact.status}
-                      onChange={(e) => updateContactStatus(contact.id, e.target.value as Contact['status'])}
-                    >
-                      <option value="new">New</option>
-                      <option value="in-progress">In Progress</option>
-                      <option value="contacted">Contacted</option>
-                      <option value="scheduled">Scheduled</option>
-                      <option value="completed">Completed</option>
-                      <option value="cancelled">Cancelled</option>
-                    </select>
+                      onChange={(value) => updateContactStatus(contact.id, value as Contact['status'])}
+                      options={[
+                        { value: 'new', label: 'New' },
+                        { value: 'in-progress', label: 'In Progress' },
+                        { value: 'contacted', label: 'Contacted' },
+                        { value: 'scheduled', label: 'Scheduled' },
+                        { value: 'completed', label: 'Completed' },
+                        { value: 'cancelled', label: 'Cancelled' }
+                      ]}
+                      buttonClassName={statusColors[contact.status]}
+                    />
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <select
-                      className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border-0 ${priorityColors[contact.priority]}`}
+                    <InlineDropdown
                       value={contact.priority}
-                      onChange={(e) => updateContactPriority(contact.id, e.target.value as Contact['priority'])}
-                    >
-                      <option value="low">Low</option>
-                      <option value="medium">Medium</option>
-                      <option value="high">High</option>
-                    </select>
+                      onChange={(value) => updateContactPriority(contact.id, value as Contact['priority'])}
+                      options={[
+                        { value: 'low', label: 'Low' },
+                        { value: 'medium', label: 'Medium' },
+                        { value: 'high', label: 'High' }
+                      ]}
+                      buttonClassName={priorityColors[contact.priority]}
+                    />
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${sourceColors[contact.source]}`}>

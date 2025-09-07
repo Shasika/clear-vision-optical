@@ -85,5 +85,406 @@
     "source": "contact-form",
     "assignedTo": "Dr. Johnson",
     "notes": "Routine checkup completed successfully, no issues found"
+  },
+  {
+    "id": "contact_1704275200000_vwx678yza",
+    "customerInfo": {
+      "name": "Lisa Martinez",
+      "email": "lisa.martinez@email.com",
+      "phone": "+94 77 345 6789"
+    },
+    "serviceInterest": "eye-exam",
+    "message": "Haven't had an eye exam in 2 years. Want to check if my prescription has changed.",
+    "status": "new",
+    "priority": "medium",
+    "createdAt": "2025-01-03T09:00:00.000Z",
+    "updatedAt": "2025-01-03T09:00:00.000Z",
+    "source": "contact-form",
+    "assignedTo": "Dr. Smith",
+    "notes": "Last exam was 2 years ago, prescription check needed",
+    "followUpDate": "2025-01-04T14:00:00.000Z"
+  },
+  {
+    "id": "contact_1704361600000_bcd901efg",
+    "customerInfo": {
+      "name": "Robert Taylor",
+      "email": "robert.taylor@company.com",
+      "phone": "+94 71 456 7890"
+    },
+    "serviceInterest": "prescription-glasses",
+    "message": "Need new prescription glasses for office work. Looking for anti-glare coating.",
+    "status": "contacted",
+    "priority": "medium",
+    "createdAt": "2025-01-04T10:30:00.000Z",
+    "updatedAt": "2025-01-04T15:20:00.000Z",
+    "source": "phone",
+    "assignedTo": "Emily Davis",
+    "notes": "Office worker, specifically requested anti-glare coating"
+  },
+  {
+    "id": "contact_1704448000000_hij234klm",
+    "customerInfo": {
+      "name": "Maria Garcia",
+      "email": "maria.garcia@gmail.com",
+      "phone": "+94 76 567 8901"
+    },
+    "serviceInterest": "contact-lenses",
+    "message": "First-time contact lens user. Need consultation and fitting.",
+    "status": "scheduled",
+    "priority": "high",
+    "createdAt": "2025-01-05T11:45:00.000Z",
+    "updatedAt": "2025-01-05T16:30:00.000Z",
+    "source": "walk-in",
+    "assignedTo": "Dr. Johnson",
+    "notes": "First-time user, scheduled for detailed fitting consultation",
+    "followUpDate": "2025-01-07T13:00:00.000Z"
+  },
+  {
+    "id": "contact_1704534400000_nop567qrs",
+    "customerInfo": {
+      "name": "Kevin Wong",
+      "email": "kevin.wong@email.com",
+      "phone": "+94 75 678 9012"
+    },
+    "serviceInterest": "frame-repair",
+    "message": "Glasses frame hinge is loose. Can this be repaired?",
+    "status": "in-progress",
+    "priority": "low",
+    "createdAt": "2025-01-06T08:15:00.000Z",
+    "updatedAt": "2025-01-06T12:40:00.000Z",
+    "source": "contact-form",
+    "assignedTo": "John Technician",
+    "notes": "Minor hinge repair, parts ordered"
+  },
+  {
+    "id": "contact_1704620800000_tuv890wxy",
+    "customerInfo": {
+      "name": "Jennifer Lee",
+      "email": "jennifer.lee@outlook.com",
+      "phone": "+94 77 789 0123"
+    },
+    "serviceInterest": "eye-exam",
+    "message": "Experiencing headaches while reading. Think I might need glasses.",
+    "status": "responded",
+    "priority": "high",
+    "createdAt": "2025-01-07T09:30:00.000Z",
+    "updatedAt": "2025-01-07T14:15:00.000Z",
+    "source": "phone",
+    "assignedTo": "Dr. Smith",
+    "notes": "Headaches indicate possible vision issues, priority exam scheduled",
+    "followUpDate": "2025-01-08T10:00:00.000Z"
+  },
+  {
+    "id": "contact_1704707200000_zab123cde",
+    "customerInfo": {
+      "name": "Andrew Kim",
+      "email": "andrew.kim@company.com",
+      "phone": "+94 71 890 1234"
+    },
+    "serviceInterest": "prescription-glasses",
+    "message": "Need progressive lenses for distance and reading. What options are available?",
+    "status": "new",
+    "priority": "medium",
+    "createdAt": "2025-01-08T11:00:00.000Z",
+    "updatedAt": "2025-01-08T11:00:00.000Z",
+    "source": "contact-form",
+    "assignedTo": "Emily Davis",
+    "notes": "Interested in progressive lenses, needs consultation on options"
+  },
+  {
+    "id": "contact_1704793600000_fgh456ijk",
+    "customerInfo": {
+      "name": "Michelle Brown",
+      "email": "michelle.brown@gmail.com",
+      "phone": "+94 76 901 2345"
+    },
+    "serviceInterest": "contact-lenses",
+    "message": "Current contact lenses are uncomfortable. Need different brand recommendation.",
+    "status": "contacted",
+    "priority": "medium",
+    "createdAt": "2025-01-09T12:15:00.000Z",
+    "updatedAt": "2025-01-09T17:30:00.000Z",
+    "source": "referral",
+    "assignedTo": "Dr. Johnson",
+    "notes": "Comfort issues with current lenses, trying different brands"
+  },
+  {
+    "id": "contact_1704880000000_lmn789opq",
+    "customerInfo": {
+      "name": "Thomas Davis",
+      "email": "thomas.davis@email.com",
+      "phone": "+94 75 012 3456"
+    },
+    "serviceInterest": "frame-repair",
+    "message": "Nose pad on my glasses broke off. Can this be replaced?",
+    "status": "completed",
+    "priority": "low",
+    "createdAt": "2025-01-10T08:45:00.000Z",
+    "updatedAt": "2025-01-10T14:20:00.000Z",
+    "source": "walk-in",
+    "assignedTo": "John Technician",
+    "notes": "Nose pad replacement completed successfully"
+  },
+  {
+    "id": "contact_1704966400000_rst012uvw",
+    "customerInfo": {
+      "name": "Amanda Wilson",
+      "email": "amanda.wilson@outlook.com",
+      "phone": "+94 77 123 4567"
+    },
+    "serviceInterest": "eye-exam",
+    "message": "Due for annual eye exam. No specific concerns, just routine checkup.",
+    "status": "scheduled",
+    "priority": "low",
+    "createdAt": "2025-01-11T10:20:00.000Z",
+    "updatedAt": "2025-01-11T16:45:00.000Z",
+    "source": "contact-form",
+    "assignedTo": "Dr. Smith",
+    "notes": "Routine annual exam, no specific issues reported",
+    "followUpDate": "2025-01-15T11:00:00.000Z"
+  },
+  {
+    "id": "contact_1705052800000_xyz345abc",
+    "customerInfo": {
+      "name": "Daniel Rodriguez",
+      "email": "daniel.rodriguez@company.com",
+      "phone": "+94 71 234 5678"
+    },
+    "serviceInterest": "prescription-glasses",
+    "message": "Work requires computer use all day. Need glasses with blue light protection.",
+    "status": "in-progress",
+    "priority": "medium",
+    "createdAt": "2025-01-12T13:30:00.000Z",
+    "updatedAt": "2025-01-12T18:15:00.000Z",
+    "source": "phone",
+    "assignedTo": "Emily Davis",
+    "notes": "Computer worker, blue light filtering lenses recommended"
+  },
+  {
+    "id": "contact_1705139200000_def678ghi",
+    "customerInfo": {
+      "name": "Rachel Green",
+      "email": "rachel.green@gmail.com",
+      "phone": "+94 76 345 6789"
+    },
+    "serviceInterest": "contact-lenses",
+    "message": "Interested in colored contact lenses for special occasions.",
+    "status": "new",
+    "priority": "low",
+    "createdAt": "2025-01-13T14:45:00.000Z",
+    "updatedAt": "2025-01-13T14:45:00.000Z",
+    "source": "contact-form",
+    "assignedTo": "Dr. Johnson",
+    "notes": "Cosmetic colored lenses inquiry, not medical necessity"
+  },
+  {
+    "id": "contact_1705225600000_jkl901mno",
+    "customerInfo": {
+      "name": "Steven Clark",
+      "email": "steven.clark@email.com",
+      "phone": "+94 75 456 7890"
+    },
+    "serviceInterest": "frame-repair",
+    "message": "Glasses lens cracked. Need replacement lens urgently.",
+    "status": "responded",
+    "priority": "high",
+    "createdAt": "2025-01-14T09:00:00.000Z",
+    "updatedAt": "2025-01-14T13:30:00.000Z",
+    "source": "walk-in",
+    "assignedTo": "John Technician",
+    "notes": "Urgent lens replacement needed, prescription on file",
+    "followUpDate": "2025-01-16T10:00:00.000Z"
+  },
+  {
+    "id": "contact_1705312000000_pqr234stu",
+    "customerInfo": {
+      "name": "Patricia Martinez",
+      "email": "patricia.martinez@outlook.com",
+      "phone": "+94 77 567 8901"
+    },
+    "serviceInterest": "eye-exam",
+    "message": "Family history of glaucoma. Want comprehensive eye health screening.",
+    "status": "contacted",
+    "priority": "high",
+    "createdAt": "2025-01-15T15:15:00.000Z",
+    "updatedAt": "2025-01-15T19:20:00.000Z",
+    "source": "referral",
+    "assignedTo": "Dr. Smith",
+    "notes": "Family history of glaucoma, comprehensive screening required",
+    "followUpDate": "2025-01-18T09:00:00.000Z"
+  },
+  {
+    "id": "contact_1705398400000_vwx567yza",
+    "customerInfo": {
+      "name": "Christopher Wang",
+      "email": "christopher.wang@company.com",
+      "phone": "+94 71 678 9012"
+    },
+    "serviceInterest": "prescription-glasses",
+    "message": "Need safety glasses with prescription lenses for workshop work.",
+    "status": "scheduled",
+    "priority": "medium",
+    "createdAt": "2025-01-16T11:30:00.000Z",
+    "updatedAt": "2025-01-16T16:45:00.000Z",
+    "source": "contact-form",
+    "assignedTo": "Emily Davis",
+    "notes": "Safety glasses with prescription, workshop requirement",
+    "followUpDate": "2025-01-19T14:00:00.000Z"
+  },
+  {
+    "id": "contact_1705484800000_bcd890efg",
+    "customerInfo": {
+      "name": "Nicole Thompson",
+      "email": "nicole.thompson@gmail.com",
+      "phone": "+94 76 789 0123"
+    },
+    "serviceInterest": "contact-lenses",
+    "message": "Travel frequently. Need daily disposable contact lenses.",
+    "status": "completed",
+    "priority": "medium",
+    "createdAt": "2025-01-17T12:45:00.000Z",
+    "updatedAt": "2025-01-17T17:30:00.000Z",
+    "source": "phone",
+    "assignedTo": "Dr. Johnson",
+    "notes": "Frequent traveler, fitted with daily disposables successfully"
+  },
+  {
+    "id": "contact_1705571200000_hij123klm",
+    "customerInfo": {
+      "name": "Mark Anderson",
+      "email": "mark.anderson@email.com",
+      "phone": "+94 75 890 1234"
+    },
+    "serviceInterest": "frame-repair",
+    "message": "Frame temple broke. Is it worth repairing or should I get new frames?",
+    "status": "new",
+    "priority": "medium",
+    "createdAt": "2025-01-18T08:20:00.000Z",
+    "updatedAt": "2025-01-18T08:20:00.000Z",
+    "source": "walk-in",
+    "assignedTo": "John Technician",
+    "notes": "Temple repair assessment needed, may require new frames"
+  },
+  {
+    "id": "contact_1705657600000_nop456qrs",
+    "customerInfo": {
+      "name": "Sophie Davis",
+      "email": "sophie.davis@outlook.com",
+      "phone": "+94 77 901 2345"
+    },
+    "serviceInterest": "eye-exam",
+    "message": "Child's first eye exam. She's 6 years old and starting school.",
+    "status": "in-progress",
+    "priority": "high",
+    "createdAt": "2025-01-19T14:00:00.000Z",
+    "updatedAt": "2025-01-19T18:30:00.000Z",
+    "source": "contact-form",
+    "assignedTo": "Dr. Smith",
+    "notes": "Pediatric eye exam, first screening before school starts",
+    "followUpDate": "2025-01-22T10:30:00.000Z"
+  },
+  {
+    "id": "contact_1705744000000_tuv789wxy",
+    "customerInfo": {
+      "name": "Brian Lee",
+      "email": "brian.lee@company.com",
+      "phone": "+94 71 012 3456"
+    },
+    "serviceInterest": "prescription-glasses",
+    "message": "Bifocal glasses are uncomfortable. Interested in progressive lenses.",
+    "status": "responded",
+    "priority": "medium",
+    "createdAt": "2025-01-20T16:30:00.000Z",
+    "updatedAt": "2025-01-20T20:15:00.000Z",
+    "source": "referral",
+    "assignedTo": "Emily Davis",
+    "notes": "Discomfort with bifocals, progressive lens consultation scheduled"
+  },
+  {
+    "id": "contact_1705830400000_zab012cde",
+    "customerInfo": {
+      "name": "Catherine Miller",
+      "email": "catherine.miller@gmail.com",
+      "phone": "+94 76 123 4567"
+    },
+    "serviceInterest": "contact-lenses",
+    "message": "Dry eyes with current contact lenses. Need different material or brand.",
+    "status": "contacted",
+    "priority": "medium",
+    "createdAt": "2025-01-21T10:15:00.000Z",
+    "updatedAt": "2025-01-21T15:45:00.000Z",
+    "source": "phone",
+    "assignedTo": "Dr. Johnson",
+    "notes": "Dry eye issues, trying silicone hydrogel lenses"
+  },
+  {
+    "id": "contact_1705916800000_fgh345ijk",
+    "customerInfo": {
+      "name": "Ryan Wilson",
+      "email": "ryan.wilson@email.com",
+      "phone": "+94 75 234 5678"
+    },
+    "serviceInterest": "frame-repair",
+    "message": "Scratched lens affecting vision. Can lens be polished or needs replacement?",
+    "status": "scheduled",
+    "priority": "medium",
+    "createdAt": "2025-01-22T12:00:00.000Z",
+    "updatedAt": "2025-01-22T17:20:00.000Z",
+    "source": "contact-form",
+    "assignedTo": "John Technician",
+    "notes": "Lens scratch assessment, may require replacement",
+    "followUpDate": "2025-01-24T13:00:00.000Z"
+  },
+  {
+    "id": "contact_1706003200000_lmn678opq",
+    "customerInfo": {
+      "name": "Jessica Garcia",
+      "email": "jessica.garcia@outlook.com",
+      "phone": "+94 77 345 6789"
+    },
+    "serviceInterest": "eye-exam",
+    "message": "Diabetes patient. Need diabetic eye exam and retinal screening.",
+    "status": "new",
+    "priority": "high",
+    "createdAt": "2025-01-23T13:45:00.000Z",
+    "updatedAt": "2025-01-23T13:45:00.000Z",
+    "source": "referral",
+    "assignedTo": "Dr. Smith",
+    "notes": "Diabetic patient, comprehensive retinal examination required",
+    "followUpDate": "2025-01-25T09:30:00.000Z"
+  },
+  {
+    "id": "contact_1706089600000_rst901tuv",
+    "customerInfo": {
+      "name": "Matthew Brown",
+      "email": "matthew.brown@company.com",
+      "phone": "+94 71 456 7890"
+    },
+    "serviceInterest": "prescription-glasses",
+    "message": "Sports activities require impact-resistant glasses. What options are available?",
+    "status": "completed",
+    "priority": "medium",
+    "createdAt": "2025-01-24T15:30:00.000Z",
+    "updatedAt": "2025-01-24T19:45:00.000Z",
+    "source": "walk-in",
+    "assignedTo": "Emily Davis",
+    "notes": "Sports glasses with polycarbonate lenses fitted successfully"
+  },
+  {
+    "id": "contact_1706176000000_wxy234zab",
+    "customerInfo": {
+      "name": "Laura Rodriguez",
+      "email": "laura.rodriguez@gmail.com",
+      "phone": "+94 76 567 8901"
+    },
+    "serviceInterest": "contact-lenses",
+    "message": "Presbyopia developing. Interested in multifocal contact lenses.",
+    "status": "in-progress",
+    "priority": "medium",
+    "createdAt": "2025-01-25T09:00:00.000Z",
+    "updatedAt": "2025-01-25T14:30:00.000Z",
+    "source": "contact-form",
+    "assignedTo": "Dr. Johnson",
+    "notes": "Presbyopia onset, multifocal lens trial in progress"
   }
 ]

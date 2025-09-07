@@ -100,5 +100,630 @@
     "imageUrl": "",
     "images": [],
     "id": "frame-1757042285568"
+  },
+  {
+    "id": "frame-004",
+    "name": "Tom Ford Classic Rectangle",
+    "brand": "Tom Ford",
+    "category": "prescription",
+    "material": "acetate",
+    "shape": "rectangle",
+    "color": "Tortoiseshell",
+    "price": 32000,
+    "inStock": true,
+    "description": "Luxury prescription frame with sophisticated Italian design",
+    "features": [
+      "Luxury Design",
+      "Premium Materials",
+      "Italian Craftsmanship"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 54,
+      "bridge_width": 18,
+      "temple_length": 140
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-005",
+    "name": "Persol Round Vintage",
+    "brand": "Persol",
+    "category": "prescription",
+    "material": "acetate",
+    "shape": "round",
+    "color": "Havana Brown",
+    "price": 28500,
+    "inStock": true,
+    "description": "Handcrafted round frames with vintage Italian styling",
+    "features": [
+      "Handcrafted",
+      "Vintage Style",
+      "Premium Acetate"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 49,
+      "bridge_width": 22,
+      "temple_length": 145
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-006",
+    "name": "Gucci Metal Aviator",
+    "brand": "Gucci",
+    "category": "prescription",
+    "material": "metal",
+    "shape": "aviator",
+    "color": "Gold",
+    "price": 35000,
+    "inStock": true,
+    "description": "Designer aviator frames with signature Gucci styling",
+    "features": [
+      "Designer Brand",
+      "Premium Metal",
+      "Signature Style"
+    ],
+    "gender": "women",
+    "frameSize": {
+      "lens_width": 55,
+      "bridge_width": 16,
+      "temple_length": 140
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-007",
+    "name": "Prada Cat Eye",
+    "brand": "Prada",
+    "category": "prescription",
+    "material": "acetate",
+    "shape": "cat-eye",
+    "color": "Burgundy",
+    "price": 29500,
+    "inStock": true,
+    "description": "Elegant cat-eye frames with sophisticated Italian design",
+    "features": [
+      "Cat-Eye Design",
+      "Italian Elegance",
+      "Luxury Materials"
+    ],
+    "gender": "women",
+    "frameSize": {
+      "lens_width": 52,
+      "bridge_width": 17,
+      "temple_length": 140
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-008",
+    "name": "Versace Square Bold",
+    "brand": "Versace",
+    "category": "prescription",
+    "material": "acetate",
+    "shape": "square",
+    "color": "Black/Gold",
+    "price": 31500,
+    "inStock": true,
+    "description": "Bold square frames with iconic Versace detailing",
+    "features": [
+      "Bold Design",
+      "Iconic Details",
+      "Luxury Brand"
+    ],
+    "gender": "men",
+    "frameSize": {
+      "lens_width": 56,
+      "bridge_width": 18,
+      "temple_length": 140
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-009",
+    "name": "Hugo Boss Professional",
+    "brand": "Hugo Boss",
+    "category": "prescription",
+    "material": "metal",
+    "shape": "rectangle",
+    "color": "Gunmetal",
+    "price": 22000,
+    "inStock": true,
+    "description": "Professional rectangle frames perfect for business wear",
+    "features": [
+      "Professional Style",
+      "Business Appropriate",
+      "Premium Quality"
+    ],
+    "gender": "men",
+    "frameSize": {
+      "lens_width": 54,
+      "bridge_width": 17,
+      "temple_length": 140
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-010",
+    "name": "Emporio Armani Modern",
+    "brand": "Emporio Armani",
+    "category": "prescription",
+    "material": "titanium",
+    "shape": "rectangle",
+    "color": "Silver",
+    "price": 25500,
+    "inStock": true,
+    "description": "Modern titanium frames with Italian sophistication",
+    "features": [
+      "Titanium Frame",
+      "Modern Design",
+      "Italian Style"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 53,
+      "bridge_width": 18,
+      "temple_length": 140
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-011",
+    "name": "Marc Jacobs Vintage Round",
+    "brand": "Marc Jacobs",
+    "category": "prescription",
+    "material": "acetate",
+    "shape": "round",
+    "color": "Ivory",
+    "price": 18500,
+    "inStock": true,
+    "description": "Vintage-inspired round frames with retro charm",
+    "features": [
+      "Vintage Inspired",
+      "Retro Style",
+      "Quality Acetate"
+    ],
+    "gender": "women",
+    "frameSize": {
+      "lens_width": 48,
+      "bridge_width": 23,
+      "temple_length": 145
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-012",
+    "name": "Police Sport Rectangle",
+    "brand": "Police",
+    "category": "prescription",
+    "material": "plastic",
+    "shape": "rectangle",
+    "color": "Matte Black",
+    "price": 14500,
+    "inStock": true,
+    "description": "Sport-inspired rectangle frames with modern edge",
+    "features": [
+      "Sport Inspired",
+      "Modern Edge",
+      "Durable Construction"
+    ],
+    "gender": "men",
+    "frameSize": {
+      "lens_width": 57,
+      "bridge_width": 15,
+      "temple_length": 135
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-013",
+    "name": "Fossil Classic Wayfarer",
+    "brand": "Fossil",
+    "category": "prescription",
+    "material": "plastic",
+    "shape": "wayfarer",
+    "color": "Brown",
+    "price": 9500,
+    "inStock": true,
+    "description": "Affordable classic wayfarer frames for everyday wear",
+    "features": [
+      "Classic Wayfarer",
+      "Affordable",
+      "Everyday Wear"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 50,
+      "bridge_width": 22,
+      "temple_length": 150
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-014",
+    "name": "Diesel Bold Square",
+    "brand": "Diesel",
+    "category": "prescription",
+    "material": "plastic",
+    "shape": "square",
+    "color": "Matte Black/Red",
+    "price": 12500,
+    "inStock": true,
+    "description": "Bold square frames with distinctive color accents",
+    "features": [
+      "Bold Design",
+      "Color Accents",
+      "Distinctive Style"
+    ],
+    "gender": "men",
+    "frameSize": {
+      "lens_width": 55,
+      "bridge_width": 17,
+      "temple_length": 140
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-015",
+    "name": "Arnette Casual Square",
+    "brand": "Arnette",
+    "category": "prescription",
+    "material": "plastic",
+    "shape": "square",
+    "color": "Matte Blue",
+    "price": 10500,
+    "inStock": true,
+    "description": "Casual square frames with relaxed street style",
+    "features": [
+      "Casual Style",
+      "Street Fashion",
+      "Relaxed Fit"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 53,
+      "bridge_width": 18,
+      "temple_length": 140
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-016",
+    "name": "Polaroid Retro Round",
+    "brand": "Polaroid",
+    "category": "prescription",
+    "material": "metal",
+    "shape": "round",
+    "color": "Antique Gold",
+    "price": 13500,
+    "inStock": true,
+    "description": "Retro round frames with authentic vintage appeal",
+    "features": [
+      "Retro Style",
+      "Vintage Appeal",
+      "Quality Metal"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 47,
+      "bridge_width": 24,
+      "temple_length": 145
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-017",
+    "name": "Carrera Modern Aviator",
+    "brand": "Carrera",
+    "category": "prescription",
+    "material": "metal",
+    "shape": "aviator",
+    "color": "Silver",
+    "price": 16500,
+    "inStock": true,
+    "description": "Modern aviator frames with contemporary styling",
+    "features": [
+      "Modern Aviator",
+      "Contemporary Style",
+      "Lightweight Metal"
+    ],
+    "gender": "men",
+    "frameSize": {
+      "lens_width": 56,
+      "bridge_width": 16,
+      "temple_length": 135
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-018",
+    "name": "Specsavers Essential",
+    "brand": "Specsavers",
+    "category": "prescription",
+    "material": "plastic",
+    "shape": "rectangle",
+    "color": "Black",
+    "price": 7500,
+    "inStock": true,
+    "description": "Essential rectangle frames for everyday prescription wear",
+    "features": [
+      "Essential Design",
+      "Budget Friendly",
+      "Daily Wear"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 52,
+      "bridge_width": 18,
+      "temple_length": 140
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-019",
+    "name": "Calvin Klein Minimalist",
+    "brand": "Calvin Klein",
+    "category": "prescription",
+    "material": "titanium",
+    "shape": "rectangle",
+    "color": "Brushed Silver",
+    "price": 21000,
+    "inStock": true,
+    "description": "Minimalist titanium frames with clean modern lines",
+    "features": [
+      "Minimalist Design",
+      "Titanium Construction",
+      "Modern Lines"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 51,
+      "bridge_width": 19,
+      "temple_length": 140
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-020",
+    "name": "Tommy Hilfiger Classic",
+    "brand": "Tommy Hilfiger",
+    "category": "prescription",
+    "material": "acetate",
+    "shape": "rectangle",
+    "color": "Navy Blue",
+    "price": 15500,
+    "inStock": true,
+    "description": "Classic rectangle frames with American preppy style",
+    "features": [
+      "Classic Design",
+      "Preppy Style",
+      "Quality Acetate"
+    ],
+    "gender": "men",
+    "frameSize": {
+      "lens_width": 54,
+      "bridge_width": 17,
+      "temple_length": 140
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-021",
+    "name": "Lacoste Sport Rectangle",
+    "brand": "Lacoste",
+    "category": "prescription",
+    "material": "plastic",
+    "shape": "rectangle",
+    "color": "Green",
+    "price": 17500,
+    "inStock": true,
+    "description": "Sport rectangle frames with iconic Lacoste styling",
+    "features": [
+      "Sport Style",
+      "Iconic Brand",
+      "Durable Plastic"
+    ],
+    "gender": "men",
+    "frameSize": {
+      "lens_width": 55,
+      "bridge_width": 16,
+      "temple_length": 140
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-022",
+    "name": "Michael Kors Glamour",
+    "brand": "Michael Kors",
+    "category": "prescription",
+    "material": "acetate",
+    "shape": "cat-eye",
+    "color": "Rose Gold",
+    "price": 19500,
+    "inStock": true,
+    "description": "Glamorous cat-eye frames with luxury appeal",
+    "features": [
+      "Glamorous Design",
+      "Cat-Eye Shape",
+      "Luxury Appeal"
+    ],
+    "gender": "women",
+    "frameSize": {
+      "lens_width": 53,
+      "bridge_width": 16,
+      "temple_length": 140
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-023",
+    "name": "Coach Vintage Square",
+    "brand": "Coach",
+    "category": "prescription",
+    "material": "acetate",
+    "shape": "square",
+    "color": "Tortoiseshell",
+    "price": 23500,
+    "inStock": true,
+    "description": "Vintage-inspired square frames with Coach elegance",
+    "features": [
+      "Vintage Inspired",
+      "Elegant Design",
+      "Premium Brand"
+    ],
+    "gender": "women",
+    "frameSize": {
+      "lens_width": 52,
+      "bridge_width": 17,
+      "temple_length": 140
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-024",
+    "name": "Burberry Classic Plaid",
+    "brand": "Burberry",
+    "category": "prescription",
+    "material": "acetate",
+    "shape": "rectangle",
+    "color": "Plaid Pattern",
+    "price": 27500,
+    "inStock": true,
+    "description": "Classic frames featuring signature Burberry plaid pattern",
+    "features": [
+      "Signature Plaid",
+      "British Style",
+      "Premium Quality"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 54,
+      "bridge_width": 18,
+      "temple_length": 140
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-025",
+    "name": "Montblanc Executive",
+    "brand": "Montblanc",
+    "category": "prescription",
+    "material": "titanium",
+    "shape": "rectangle",
+    "color": "Matte Gunmetal",
+    "price": 38500,
+    "inStock": true,
+    "description": "Executive titanium frames with sophisticated German engineering",
+    "features": [
+      "Executive Style",
+      "German Engineering",
+      "Premium Titanium"
+    ],
+    "gender": "men",
+    "frameSize": {
+      "lens_width": 55,
+      "bridge_width": 17,
+      "temple_length": 145
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-026",
+    "name": "Kate Spade Feminine Round",
+    "brand": "Kate Spade",
+    "category": "prescription",
+    "material": "acetate",
+    "shape": "round",
+    "color": "Pink",
+    "price": 16500,
+    "inStock": true,
+    "description": "Feminine round frames with playful Kate Spade styling",
+    "features": [
+      "Feminine Design",
+      "Playful Style",
+      "Quality Construction"
+    ],
+    "gender": "women",
+    "frameSize": {
+      "lens_width": 49,
+      "bridge_width": 21,
+      "temple_length": 140
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-027",
+    "name": "DKNY Urban Rectangle",
+    "brand": "DKNY",
+    "category": "prescription",
+    "material": "metal",
+    "shape": "rectangle",
+    "color": "Matte Black",
+    "price": 18000,
+    "inStock": true,
+    "description": "Urban rectangle frames with New York city style",
+    "features": [
+      "Urban Style",
+      "City Fashion",
+      "Modern Design"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 53,
+      "bridge_width": 17,
+      "temple_length": 140
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "frame-028",
+    "name": "Oakley Sport Prescription",
+    "brand": "Oakley",
+    "category": "prescription",
+    "material": "plastic",
+    "shape": "wrap",
+    "color": "Matte Gray",
+    "price": 20500,
+    "inStock": true,
+    "description": "Sport prescription frames with performance features",
+    "features": [
+      "Sport Performance",
+      "Prescription Ready",
+      "Impact Resistant"
+    ],
+    "gender": "men",
+    "frameSize": {
+      "lens_width": 58,
+      "bridge_width": 16,
+      "temple_length": 135
+    },
+    "imageUrl": "",
+    "images": []
   }
 ]

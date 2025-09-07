@@ -6,6 +6,7 @@ import { useFrames } from '../hooks/useFrames';
 import FrameCard from '../components/FrameCard';
 import Pagination from '../components/Pagination';
 import InquiryModal from '../components/InquiryModal';
+import CustomDropdown from '../components/CustomDropdown';
 
 const Frames: React.FC = () => {
   const navigate = useNavigate();
@@ -217,35 +218,39 @@ const Frames: React.FC = () => {
               )}
             </div>
 
-            <div className="flex items-center space-x-4">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
               <span className="text-sm text-gray-600">
                 {allFilteredFrames.length} frame{allFilteredFrames.length !== 1 ? 's' : ''} found
               </span>
               
-              <select
-                value={itemsPerPage}
-                onChange={(e) => {
-                  setItemsPerPage(Number(e.target.value));
-                  setCurrentPage(1);
-                }}
-                className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-primary-500 focus:border-primary-500"
-              >
-                <option value={8}>8 per page</option>
-                <option value={12}>12 per page</option>
-                <option value={16}>16 per page</option>
-                <option value={24}>24 per page</option>
-              </select>
-              
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as 'name' | 'price-low' | 'price-high' | 'brand')}
-                className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-primary-500 focus:border-primary-500"
-              >
-                <option value="name">Sort by Name</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-                <option value="brand">Sort by Brand</option>
-              </select>
+              <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 w-full sm:w-auto">
+                <CustomDropdown
+                  value={itemsPerPage}
+                  onChange={(value) => {
+                    setItemsPerPage(Number(value));
+                    setCurrentPage(1);
+                  }}
+                  options={[
+                    { value: 8, label: '8 per page' },
+                    { value: 12, label: '12 per page' },
+                    { value: 16, label: '16 per page' },
+                    { value: 24, label: '24 per page' }
+                  ]}
+                  className="w-full sm:w-auto min-w-[120px] focus:ring-primary-500"
+                />
+                
+                <CustomDropdown
+                  value={sortBy}
+                  onChange={(value) => setSortBy(value as 'name' | 'price-low' | 'price-high' | 'brand')}
+                  options={[
+                    { value: 'name', label: 'Sort by Name' },
+                    { value: 'price-low', label: 'Price: Low to High' },
+                    { value: 'price-high', label: 'Price: High to Low' },
+                    { value: 'brand', label: 'Sort by Brand' }
+                  ]}
+                  className="w-full sm:w-auto min-w-[160px] focus:ring-primary-500"
+                />
+              </div>
             </div>
           </div>
 

@@ -61,5 +61,780 @@
     },
     "imageUrl": "",
     "images": []
+  },
+  {
+    "id": "sg-003",
+    "name": "Oakley Frogskins",
+    "brand": "Oakley",
+    "category": "lifestyle",
+    "material": "plastic",
+    "shape": "square",
+    "color": "Matte Black",
+    "price": 16500,
+    "inStock": true,
+    "description": "Classic lifestyle sunglasses with modern comfort and style",
+    "features": [
+      "Lightweight",
+      "Durable",
+      "Comfortable Fit"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 55,
+      "bridge_width": 17,
+      "temple_length": 138
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": false,
+      "tinted": true,
+      "mirrored": false
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-004",
+    "name": "Persol Classic Round",
+    "brand": "Persol",
+    "category": "classic",
+    "material": "acetate",
+    "shape": "round",
+    "color": "Havana",
+    "price": 22000,
+    "inStock": true,
+    "description": "Handcrafted acetate sunglasses with vintage appeal",
+    "features": [
+      "Handcrafted",
+      "Premium Materials",
+      "Vintage Style"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 49,
+      "bridge_width": 22,
+      "temple_length": 145
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": true,
+      "tinted": true,
+      "mirrored": false
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-005",
+    "name": "Maui Jim Cliff House",
+    "brand": "Maui Jim",
+    "category": "sport",
+    "material": "nylon",
+    "shape": "wrap",
+    "color": "Gloss Black",
+    "price": 24500,
+    "inStock": true,
+    "description": "High-performance sport sunglasses with polarized lenses",
+    "features": [
+      "Polarized",
+      "Sport Performance",
+      "Impact Resistant"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 61,
+      "bridge_width": 16,
+      "temple_length": 130
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": true,
+      "tinted": true,
+      "mirrored": true
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-006",
+    "name": "Tom Ford Henry",
+    "brand": "Tom Ford",
+    "category": "luxury",
+    "material": "metal",
+    "shape": "aviator",
+    "color": "Rose Gold",
+    "price": 35000,
+    "inStock": true,
+    "description": "Luxury designer aviator sunglasses with premium finishing",
+    "features": [
+      "Luxury Design",
+      "Premium Quality",
+      "Designer Brand"
+    ],
+    "gender": "men",
+    "frameSize": {
+      "lens_width": 60,
+      "bridge_width": 13,
+      "temple_length": 140
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": false,
+      "tinted": true,
+      "mirrored": false
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-007",
+    "name": "Prada Square Classic",
+    "brand": "Prada",
+    "category": "luxury",
+    "material": "acetate",
+    "shape": "square",
+    "color": "Tortoiseshell",
+    "price": 28000,
+    "inStock": true,
+    "description": "Elegant square sunglasses with sophisticated Italian design",
+    "features": [
+      "Italian Design",
+      "Luxury Materials",
+      "Elegant Style"
+    ],
+    "gender": "women",
+    "frameSize": {
+      "lens_width": 54,
+      "bridge_width": 18,
+      "temple_length": 140
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": false,
+      "tinted": true,
+      "mirrored": false
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-008",
+    "name": "Carrera Champion",
+    "brand": "Carrera",
+    "category": "sport",
+    "material": "plastic",
+    "shape": "wrap",
+    "color": "Matte Blue",
+    "price": 14500,
+    "inStock": true,
+    "description": "Sport sunglasses designed for active lifestyle and performance",
+    "features": [
+      "Active Design",
+      "Lightweight",
+      "Secure Fit"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 62,
+      "bridge_width": 14,
+      "temple_length": 128
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": true,
+      "tinted": true,
+      "mirrored": false
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-009",
+    "name": "Gucci Round Frame",
+    "brand": "Gucci",
+    "category": "luxury",
+    "material": "metal",
+    "shape": "round",
+    "color": "Gold",
+    "price": 32000,
+    "inStock": true,
+    "description": "Designer round sunglasses with signature Gucci styling",
+    "features": [
+      "Designer Brand",
+      "Premium Materials",
+      "Signature Style"
+    ],
+    "gender": "women",
+    "frameSize": {
+      "lens_width": 50,
+      "bridge_width": 21,
+      "temple_length": 145
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": false,
+      "tinted": true,
+      "mirrored": false
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-010",
+    "name": "Costa Del Mar Blackfin",
+    "brand": "Costa Del Mar",
+    "category": "sport",
+    "material": "nylon",
+    "shape": "rectangle",
+    "color": "Matte Gray",
+    "price": 19500,
+    "inStock": true,
+    "description": "Fishing and water sport sunglasses with superior lens clarity",
+    "features": [
+      "Water Sports",
+      "Polarized",
+      "Anti-Glare"
+    ],
+    "gender": "men",
+    "frameSize": {
+      "lens_width": 59,
+      "bridge_width": 15,
+      "temple_length": 125
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": true,
+      "tinted": true,
+      "mirrored": false
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-011",
+    "name": "Versace Medusa",
+    "brand": "Versace",
+    "category": "luxury",
+    "material": "acetate",
+    "shape": "cat-eye",
+    "color": "Black/Gold",
+    "price": 29500,
+    "inStock": true,
+    "description": "Glamorous cat-eye sunglasses with iconic Medusa detailing",
+    "features": [
+      "Luxury Design",
+      "Iconic Styling",
+      "Premium Quality"
+    ],
+    "gender": "women",
+    "frameSize": {
+      "lens_width": 56,
+      "bridge_width": 16,
+      "temple_length": 140
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": false,
+      "tinted": true,
+      "mirrored": false
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-012",
+    "name": "Police Edge",
+    "brand": "Police",
+    "category": "sport",
+    "material": "metal",
+    "shape": "aviator",
+    "color": "Silver",
+    "price": 13500,
+    "inStock": true,
+    "description": "Modern aviator sunglasses with contemporary edge design",
+    "features": [
+      "Modern Design",
+      "Durable Frame",
+      "Comfortable Wear"
+    ],
+    "gender": "men",
+    "frameSize": {
+      "lens_width": 57,
+      "bridge_width": 15,
+      "temple_length": 135
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": false,
+      "tinted": true,
+      "mirrored": true
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-013",
+    "name": "Fossil Classic Square",
+    "brand": "Fossil",
+    "category": "casual",
+    "material": "plastic",
+    "shape": "square",
+    "color": "Brown",
+    "price": 8500,
+    "inStock": true,
+    "description": "Affordable classic square sunglasses for everyday wear",
+    "features": [
+      "Affordable",
+      "Classic Style",
+      "Everyday Wear"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 53,
+      "bridge_width": 19,
+      "temple_length": 142
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": false,
+      "tinted": true,
+      "mirrored": false
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-014",
+    "name": "Diesel Rectangle Sport",
+    "brand": "Diesel",
+    "category": "sport",
+    "material": "plastic",
+    "shape": "rectangle",
+    "color": "Matte Black/Red",
+    "price": 11500,
+    "inStock": true,
+    "description": "Sporty rectangle sunglasses with bold color accents",
+    "features": [
+      "Bold Design",
+      "Sport Style",
+      "Color Accents"
+    ],
+    "gender": "men",
+    "frameSize": {
+      "lens_width": 58,
+      "bridge_width": 16,
+      "temple_length": 135
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": false,
+      "tinted": true,
+      "mirrored": false
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-015",
+    "name": "Marc Jacobs Round Vintage",
+    "brand": "Marc Jacobs",
+    "category": "vintage",
+    "material": "acetate",
+    "shape": "round",
+    "color": "Ivory",
+    "price": 17500,
+    "inStock": true,
+    "description": "Vintage-inspired round sunglasses with retro charm",
+    "features": [
+      "Vintage Style",
+      "Retro Design",
+      "Quality Materials"
+    ],
+    "gender": "women",
+    "frameSize": {
+      "lens_width": 48,
+      "bridge_width": 23,
+      "temple_length": 145
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": false,
+      "tinted": true,
+      "mirrored": false
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-016",
+    "name": "Arnette Dropout",
+    "brand": "Arnette",
+    "category": "casual",
+    "material": "plastic",
+    "shape": "square",
+    "color": "Matte Black",
+    "price": 9500,
+    "inStock": true,
+    "description": "Casual lifestyle sunglasses with relaxed street style",
+    "features": [
+      "Casual Style",
+      "Affordable",
+      "Street Fashion"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 55,
+      "bridge_width": 17,
+      "temple_length": 140
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": false,
+      "tinted": true,
+      "mirrored": false
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-017",
+    "name": "Polaroid Vintage Round",
+    "brand": "Polaroid",
+    "category": "vintage",
+    "material": "metal",
+    "shape": "round",
+    "color": "Antique Gold",
+    "price": 12500,
+    "inStock": true,
+    "description": "Classic round sunglasses with authentic vintage styling",
+    "features": [
+      "Vintage Appeal",
+      "Polarized Lenses",
+      "Classic Design"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 51,
+      "bridge_width": 20,
+      "temple_length": 145
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": true,
+      "tinted": true,
+      "mirrored": false
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-018",
+    "name": "Bolle Bolt",
+    "brand": "Bolle",
+    "category": "sport",
+    "material": "nylon",
+    "shape": "wrap",
+    "color": "Matte Blue",
+    "price": 16000,
+    "inStock": true,
+    "description": "High-performance sport sunglasses for cycling and running",
+    "features": [
+      "Performance",
+      "Lightweight",
+      "Secure Fit"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 64,
+      "bridge_width": 12,
+      "temple_length": 125
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": true,
+      "tinted": true,
+      "mirrored": true
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-019",
+    "name": "Hugo Boss Rectangle",
+    "brand": "Hugo Boss",
+    "category": "business",
+    "material": "metal",
+    "shape": "rectangle",
+    "color": "Gunmetal",
+    "price": 21000,
+    "inStock": true,
+    "description": "Professional rectangle sunglasses perfect for business wear",
+    "features": [
+      "Professional",
+      "Premium Quality",
+      "Business Style"
+    ],
+    "gender": "men",
+    "frameSize": {
+      "lens_width": 56,
+      "bridge_width": 17,
+      "temple_length": 140
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": false,
+      "tinted": true,
+      "mirrored": false
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-020",
+    "name": "Emporio Armani Cat Eye",
+    "brand": "Emporio Armani",
+    "category": "luxury",
+    "material": "acetate",
+    "shape": "cat-eye",
+    "color": "Burgundy",
+    "price": 25500,
+    "inStock": true,
+    "description": "Sophisticated cat-eye sunglasses with Italian elegance",
+    "features": [
+      "Italian Design",
+      "Sophisticated",
+      "Luxury Materials"
+    ],
+    "gender": "women",
+    "frameSize": {
+      "lens_width": 55,
+      "bridge_width": 16,
+      "temple_length": 140
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": false,
+      "tinted": true,
+      "mirrored": false
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-021",
+    "name": "Specsavers Classic",
+    "brand": "Specsavers",
+    "category": "casual",
+    "material": "plastic",
+    "shape": "wayfarer",
+    "color": "Black",
+    "price": 6500,
+    "inStock": true,
+    "description": "Budget-friendly classic wayfarer sunglasses for daily wear",
+    "features": [
+      "Budget Friendly",
+      "Classic Wayfarer",
+      "Daily Wear"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 50,
+      "bridge_width": 22,
+      "temple_length": 150
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": false,
+      "tinted": true,
+      "mirrored": false
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-022",
+    "name": "Randolph Engineering Aviator",
+    "brand": "Randolph",
+    "category": "military",
+    "material": "metal",
+    "shape": "aviator",
+    "color": "Matte Chrome",
+    "price": 27500,
+    "inStock": true,
+    "description": "Military-grade aviator sunglasses with superior durability",
+    "features": [
+      "Military Grade",
+      "Superior Durability",
+      "Professional Quality"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 57,
+      "bridge_width": 14,
+      "temple_length": 135
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": false,
+      "tinted": true,
+      "mirrored": false
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-023",
+    "name": "Spy Optic Discord",
+    "brand": "Spy Optic",
+    "category": "sport",
+    "material": "grilamid",
+    "shape": "rectangle",
+    "color": "Matte Black",
+    "price": 15500,
+    "inStock": true,
+    "description": "Action sports sunglasses with impact-resistant construction",
+    "features": [
+      "Action Sports",
+      "Impact Resistant",
+      "Flexible Frame"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 59,
+      "bridge_width": 14,
+      "temple_length": 130
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": true,
+      "tinted": true,
+      "mirrored": false
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-024",
+    "name": "Serengeti Drivers",
+    "brand": "Serengeti",
+    "category": "driving",
+    "material": "metal",
+    "shape": "aviator",
+    "color": "Gold",
+    "price": 23000,
+    "inStock": true,
+    "description": "Specialized driving sunglasses with photochromic lenses",
+    "features": [
+      "Photochromic",
+      "Driving Optimized",
+      "Premium Optics"
+    ],
+    "gender": "men",
+    "frameSize": {
+      "lens_width": 58,
+      "bridge_width": 14,
+      "temple_length": 135
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": true,
+      "tinted": true,
+      "mirrored": false
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-025",
+    "name": "Wiley X Valor",
+    "brand": "Wiley X",
+    "category": "tactical",
+    "material": "nylon",
+    "shape": "wrap",
+    "color": "Matte Black",
+    "price": 18500,
+    "inStock": true,
+    "description": "Tactical sunglasses meeting ANSI safety standards",
+    "features": [
+      "ANSI Certified",
+      "Tactical Design",
+      "Safety Rated"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 63,
+      "bridge_width": 15,
+      "temple_length": 125
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": true,
+      "tinted": true,
+      "mirrored": true
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-026",
+    "name": "Oakley Holbrook XL",
+    "brand": "Oakley",
+    "category": "lifestyle",
+    "material": "plastic",
+    "shape": "square",
+    "color": "Polished Black",
+    "price": 17000,
+    "inStock": true,
+    "description": "Larger version of the classic Holbrook with enhanced coverage",
+    "features": [
+      "Enhanced Coverage",
+      "Classic Style",
+      "Comfortable Fit"
+    ],
+    "gender": "men",
+    "frameSize": {
+      "lens_width": 59,
+      "bridge_width": 18,
+      "temple_length": 137
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": false,
+      "tinted": true,
+      "mirrored": false
+    },
+    "imageUrl": "",
+    "images": []
+  },
+  {
+    "id": "sg-027",
+    "name": "Revo Bono",
+    "brand": "Revo",
+    "category": "classic",
+    "material": "metal",
+    "shape": "aviator",
+    "color": "Chrome",
+    "price": 20500,
+    "inStock": true,
+    "description": "Premium aviator sunglasses with crystal-clear optics",
+    "features": [
+      "Crystal Optics",
+      "Premium Materials",
+      "Classic Aviator"
+    ],
+    "gender": "unisex",
+    "frameSize": {
+      "lens_width": 56,
+      "bridge_width": 15,
+      "temple_length": 140
+    },
+    "lensFeatures": {
+      "uvProtection": "100% UV400",
+      "polarized": true,
+      "tinted": true,
+      "mirrored": true
+    },
+    "imageUrl": "",
+    "images": []
   }
 ]

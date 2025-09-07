@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import JSONDownloadUtility from '../../components/admin/JSONDownloadUtility';
 import { 
   Glasses, 
   Sun, 
@@ -501,8 +500,6 @@ const AdminDashboard: React.FC = () => {
         </div>
       </div>
 
-      {/* Data Management Utility */}
-      <JSONDownloadUtility />
 
       {/* Recent Items Overview */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
