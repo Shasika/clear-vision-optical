@@ -462,7 +462,7 @@ const InquiryManagement: React.FC = () => {
                       </div>
                     </div>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
+                  <td className="px-6 py-4">
                     <InlineDropdown
                       value={inquiry.status}
                       onChange={(value) => handleStatusChange(inquiry.id, value as string)}
@@ -477,7 +477,7 @@ const InquiryManagement: React.FC = () => {
                       buttonClassName={statusColors[inquiry.status]}
                     />
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
+                  <td className="px-6 py-4">
                     <InlineDropdown
                       value={inquiry.priority}
                       onChange={(value) => handlePriorityChange(inquiry.id, value as string)}

@@ -56,19 +56,20 @@ const InlineDropdown: React.FC<InlineDropdownProps> = ({
         type="button"
         onClick={handleToggle}
         className={`
-          inline-flex items-center justify-between text-xs font-medium rounded-full px-2.5 py-0.5
+          inline-flex items-center justify-between text-xs font-medium rounded-full px-3 py-1
           hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-blue-500
+          min-w-[100px] max-w-[140px]
           ${buttonClassName}
           ${isOpen ? 'ring-2 ring-blue-500' : ''}
         `}
         aria-haspopup="listbox"
         aria-expanded={isOpen}
       >
-        <span className="truncate">
+        <span className="truncate mr-1">
           {selectedOption ? selectedOption.label : 'Select...'}
         </span>
         <ChevronDown 
-          className={`ml-1 h-3 w-3 transition-transform ${
+          className={`h-3 w-3 transition-transform flex-shrink-0 ${
             isOpen ? 'transform rotate-180' : ''
           }`} 
         />
@@ -77,7 +78,7 @@ const InlineDropdown: React.FC<InlineDropdownProps> = ({
       {isOpen && (
         <div className={`
           absolute z-50 mt-1 bg-white border border-gray-300 rounded-lg shadow-lg
-          min-w-[120px] max-h-48 overflow-auto
+          min-w-[140px] max-h-48 overflow-auto left-0
           ${dropdownClassName}
         `}>
           {options.map((option) => (

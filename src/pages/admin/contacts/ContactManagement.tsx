@@ -380,7 +380,7 @@ const ContactManagement: React.FC = () => {
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="text-sm text-gray-900">{contact.serviceInterest}</div>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
+                  <td className="px-6 py-4">
                     <InlineDropdown
                       value={contact.status}
                       onChange={(value) => updateContactStatus(contact.id, value as Contact['status'])}
@@ -395,7 +395,7 @@ const ContactManagement: React.FC = () => {
                       buttonClassName={statusColors[contact.status]}
                     />
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
+                  <td className="px-6 py-4">
                     <InlineDropdown
                       value={contact.priority}
                       onChange={(value) => updateContactPriority(contact.id, value as Contact['priority'])}
