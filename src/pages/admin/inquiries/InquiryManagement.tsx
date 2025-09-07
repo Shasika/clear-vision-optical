@@ -123,37 +123,37 @@ const InquiryManagement: React.FC = () => {
   // Define sorting options
   const sortOptions: SortOption<Inquiry>[] = [
     { 
-      key: 'customerInfo', 
+      key: 'customerInfo' as keyof Inquiry, 
       label: 'Customer Name', 
       type: 'string',
       getValue: (inquiry: Inquiry) => inquiry.customerInfo.name 
     },
     { 
-      key: 'customerInfo', 
+      key: 'customerInfo' as keyof Inquiry, 
       label: 'Customer Email', 
       type: 'string',
       getValue: (inquiry: Inquiry) => inquiry.customerInfo.email 
     },
     { 
-      key: 'product', 
+      key: 'product' as keyof Inquiry, 
       label: 'Product Name', 
       type: 'string',
       getValue: (inquiry: Inquiry) => inquiry.product.name 
     },
     { 
-      key: 'product', 
+      key: 'product' as keyof Inquiry, 
       label: 'Product Brand', 
       type: 'string',
       getValue: (inquiry: Inquiry) => inquiry.product.brand 
     },
     { 
-      key: 'product', 
+      key: 'product' as keyof Inquiry, 
       label: 'Product Price', 
       type: 'number',
       getValue: (inquiry: Inquiry) => inquiry.product.price 
     },
     { 
-      key: 'product', 
+      key: 'product' as keyof Inquiry, 
       label: 'Product Type', 
       type: 'string',
       getValue: (inquiry: Inquiry) => inquiry.product.type 

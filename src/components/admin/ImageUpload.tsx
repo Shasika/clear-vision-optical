@@ -141,7 +141,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
               className="w-full h-full object-cover"
               onError={(e) => {
                 console.error('Image failed to load:', currentImage);
-                (e.target as HTMLImageElement).style.display = 'none';
+                (e.target as HTMLImageElement).src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDEyOCAxMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEyOCIgaGVpZ2h0PSIxMjgiIGZpbGw9IiNGM0Y0RjYiLz48cGF0aCBkPSJNNDQgNDRIMTJWODRINDRWNDRaIiBmaWxsPSIjRDFENU1CIi8+PC9zdmc+';
               }}
               onLoad={() => {
                 console.log('Image loaded successfully:', currentImage);

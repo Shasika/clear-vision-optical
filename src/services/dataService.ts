@@ -195,7 +195,20 @@ class DataService {
     } catch (error) {
       console.error('Error loading frames from backend API:', error);
       
-      // Fallback to localStorage if API fails
+      // Fallback 1: Try static JSON file (for GitHub Pages)
+      try {
+        console.log('📄 Fallback 1: Loading frames from static JSON...');
+        const staticResponse = await fetch(`${window.location.origin}/frames.json`);
+        if (staticResponse.ok) {
+          this.framesCache = await staticResponse.json();
+          console.log(`✅ Loaded ${this.framesCache?.length || 0} frames from static JSON`);
+          return this.framesCache || [];
+        }
+      } catch (staticError) {
+        console.log('📄 Static JSON not available, trying localStorage...');
+      }
+
+      // Fallback 2: localStorage if API and static files fail
       const localData = localStorage.getItem('frames_data');
       if (localData) {
         console.log('📱 Final fallback: Loading frames from localStorage');
@@ -417,7 +430,20 @@ class DataService {
     } catch (error) {
       console.error('Error loading sunglasses from backend API:', error);
       
-      // Fallback to localStorage if API fails
+      // Fallback 1: Try static JSON file (for GitHub Pages)
+      try {
+        console.log('🕶️ Fallback 1: Loading sunglasses from static JSON...');
+        const staticResponse = await fetch(`${window.location.origin}/sunglasses.json`);
+        if (staticResponse.ok) {
+          this.sunglassesCache = await staticResponse.json();
+          console.log(`✅ Loaded ${this.sunglassesCache?.length || 0} sunglasses from static JSON`);
+          return this.sunglassesCache || [];
+        }
+      } catch (staticError) {
+        console.log('🕶️ Static JSON not available, trying localStorage...');
+      }
+
+      // Fallback 2: localStorage if API and static files fail
       const localData = localStorage.getItem('sunglasses_data');
       if (localData) {
         console.log('📱 Final fallback: Loading sunglasses from localStorage');
@@ -589,7 +615,20 @@ class DataService {
     } catch (error) {
       console.error('Error loading company data from backend API:', error);
       
-      // Fallback to localStorage if API fails
+      // Fallback 1: Try static JSON file (for GitHub Pages)
+      try {
+        console.log('🏢 Fallback 1: Loading company data from static JSON...');
+        const staticResponse = await fetch(`${window.location.origin}/company.json`);
+        if (staticResponse.ok) {
+          this.companyCache = await staticResponse.json();
+          console.log('✅ Loaded company data from static JSON');
+          return this.companyCache;
+        }
+      } catch (staticError) {
+        console.log('🏢 Static JSON not available, trying localStorage...');
+      }
+
+      // Fallback 2: localStorage if API and static files fail
       const localData = localStorage.getItem('company_data');
       if (localData) {
         console.log('📱 Final fallback: Loading company data from localStorage');
@@ -674,16 +713,14 @@ class DataService {
         throw new Error('File size too large. Please select a file smaller than 10MB.');
       }
       
-      // Create unique filename
-      const timestamp = Date.now();
-      const sanitizedName = file.name.replace(/[^a-zA-Z0-9.-]/g, '_').toLowerCase();
-      const fileName = `${timestamp}_${sanitizedName}`;
-      
-      // Convert file to data URL for saving
+      // Create FormData for file upload
       const formData = new FormData();
       formData.append('image', file);
       formData.append('folder', folder);
-      formData.append('filename', fileName);
+      
+      // For fallback storage
+      const timestamp = Date.now();
+      const sanitizedName = file.name.replace(/[^a-zA-Z0-9.-]/g, '_').toLowerCase();
       
       // Try to save via backend API first
       try {

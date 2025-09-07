@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { ArrowLeft, Save, X } from 'lucide-react';
 import { useSunglassesAdmin } from '../../../hooks/useSunglassesAdmin';
 import ImageGalleryUpload from '../../../components/admin/ImageGalleryUpload';
+import { dataService } from '../../../services/dataService';
 import type { Sunglasses } from '../../../types/sunglasses';
 
 const SunglassesForm: React.FC = () => {
@@ -14,6 +15,8 @@ const SunglassesForm: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [dataLoading, setDataLoading] = useState(isEditing);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [success, setSuccess] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
 
   const [formData, setFormData] = useState<Partial<Sunglasses>>({
     name: '',
@@ -43,11 +46,12 @@ const SunglassesForm: React.FC = () => {
   });
 
   const [newFeature, setNewFeature] = useState('');
+  const [imagesToDelete, setImagesToDelete] = useState<string[]>([]);
 
   useEffect(() => {
     const loadSunglassesData = () => {
-      if (isEditing && id && !sunglassesLoading) {
-        const sg = getSunglassesById(id);
+      if (isEditing && id && !sunglassesLoading && sunglasses.length > 0) {
+        const sg = sunglasses.find(s => s.id === id);
         
         if (sg) {
           const formDataToSet = {
@@ -88,7 +92,7 @@ const SunglassesForm: React.FC = () => {
     };
     
     loadSunglassesData();
-  }, [id, isEditing, sunglassesLoading, sunglasses.length, getSunglassesById]);
+  }, [id, isEditing, sunglassesLoading, sunglasses]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
@@ -159,6 +163,20 @@ const SunglassesForm: React.FC = () => {
     setLoading(true);
     
     try {
+      // First delete marked images from server
+      if (imagesToDelete.length > 0) {
+        console.log('🗑️ Deleting images from server:', imagesToDelete);
+        for (const imageToDelete of imagesToDelete) {
+          try {
+            await dataService.deleteImage(imageToDelete);
+            console.log('✅ Image deleted from server:', imageToDelete);
+          } catch (error) {
+            console.error('❌ Failed to delete image from server:', error);
+            // Continue with other deletions even if one fails
+          }
+        }
+      }
+
       let success = false;
       
       if (isEditing && id) {
@@ -168,10 +186,20 @@ const SunglassesForm: React.FC = () => {
       }
 
       if (success) {
-        navigate('/admin/sunglasses');
+        if (isEditing) {
+          // Stay on edit page with success message
+          setSuccess(true);
+          setSuccessMessage('Sunglasses updated successfully!');
+          setTimeout(() => setSuccess(false), 5000);
+        } else {
+          // Redirect to listing page for new creation
+          setSuccessMessage('New sunglasses created successfully!');
+          navigate('/admin/sunglasses');
+        }
       }
     } catch (error) {
       console.error('Error saving sunglasses:', error);
+      setErrors({ form: 'Failed to save sunglasses. Please try again.' });
     } finally {
       setLoading(false);
     }
@@ -210,6 +238,38 @@ const SunglassesForm: React.FC = () => {
           </p>
         </div>
       </div>
+
+      {/* Success Message */}
+      {success && (
+        <div className="bg-green-50 border border-green-200 rounded-md p-4">
+          <div className="flex items-center">
+            <div className="flex-shrink-0">
+              <svg className="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <p className="text-sm font-medium text-green-800">{successMessage}</p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Form Error */}
+      {errors.form && (
+        <div className="bg-red-50 border border-red-200 rounded-md p-4">
+          <div className="flex items-center">
+            <div className="flex-shrink-0">
+              <svg className="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <p className="text-sm font-medium text-red-800">{errors.form}</p>
+            </div>
+          </div>
+        </div>
+      )}
 
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Basic Information */}
@@ -534,13 +594,17 @@ const SunglassesForm: React.FC = () => {
             images={formData.images || []}
             folder="sunglasses"
             maxImages={5}
-            onImagesChange={(images) => {
+            onImagesChange={(images, deletedImages) => {
               setFormData(prev => ({ 
                 ...prev, 
                 images,
                 // Set first image as main imageUrl for backward compatibility
                 imageUrl: images.length > 0 ? images[0] : ''
               }));
+              // Track images to delete
+              if (deletedImages) {
+                setImagesToDelete(deletedImages);
+              }
             }}
           />
         </div>

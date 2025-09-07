@@ -5,7 +5,7 @@ import { dataService } from '../../services/dataService';
 interface ImageGalleryUploadProps {
   images: string[];
   folder: 'frames' | 'sunglasses' | 'company';
-  onImagesChange: (images: string[]) => void;
+  onImagesChange: (images: string[], deletedImages?: string[]) => void;
   maxImages?: number;
   className?: string;
 }
@@ -22,13 +22,17 @@ const ImageGalleryUpload: React.FC<ImageGalleryUploadProps> = ({
     if (imagePath.startsWith('data:') || imagePath.startsWith('http')) {
       return imagePath; // Already a full URL or base64
     }
-    // Convert relative path to full URL
-    return `http://localhost:3001${imagePath}`;
+    // Convert relative path to full URL - use same base URL as dataService
+    const baseUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+      ? 'http://localhost:3001' 
+      : `${window.location.protocol}//${window.location.hostname}:3001`;
+    return `${baseUrl}${imagePath}`;
   };
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
   const [dragOver, setDragOver] = useState(false);
+  const [deletedImages, setDeletedImages] = useState<string[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
 
@@ -84,7 +88,7 @@ const ImageGalleryUpload: React.FC<ImageGalleryUploadProps> = ({
       // Add successfully uploaded images
       if (newImages.length > 0) {
         const updatedImages = [...images, ...newImages];
-        onImagesChange(updatedImages);
+        onImagesChange(updatedImages, deletedImages);
         setSuccess(true);
         setTimeout(() => setSuccess(false), 3000);
       } else if (errors.length === 0) {
@@ -127,22 +131,17 @@ const ImageGalleryUpload: React.FC<ImageGalleryUploadProps> = ({
     }
   };
 
-  const removeImage = async (index: number) => {
+  const removeImage = (index: number) => {
     const imageToDelete = images[index];
     
-    // Delete the actual image file from the server
+    // Mark image for deletion (don't delete from server yet)
     if (imageToDelete) {
-      try {
-        await dataService.deleteImage(imageToDelete);
-        console.log('✅ Image deleted from server:', imageToDelete);
-      } catch (error) {
-        console.error('❌ Failed to delete image from server:', error);
-        // Still continue to remove from array even if server deletion fails
-      }
+      setDeletedImages(prev => [...prev, imageToDelete]);
+      console.log('🗑️ Image marked for deletion:', imageToDelete);
     }
     
     const newImages = images.filter((_, i) => i !== index);
-    onImagesChange(newImages);
+    onImagesChange(newImages, [...deletedImages, imageToDelete].filter(Boolean));
   };
 
   const openFileDialog = () => {
@@ -163,7 +162,7 @@ const ImageGalleryUpload: React.FC<ImageGalleryUploadProps> = ({
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
                   onError={(e) => {
                     console.error('Image failed to load:', image);
-                    (e.target as HTMLImageElement).style.display = 'none';
+                    (e.target as HTMLImageElement).src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNGM0Y0RjYiLz48dGV4dCB4PSI1MCIgeT0iMTA1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5Q0E5QkMiPkltYWdlIE5vdCBGb3VuZDwvdGV4dD48L3N2Zz4=';
                   }}
                 />
                 {uploading && (

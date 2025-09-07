@@ -15,7 +15,7 @@ app.use(express.json({ limit: '10mb' }));
 app.use('/images', express.static(path.join(__dirname, '..', 'public', 'images')));
 
 // Paths to JSON files and images
-const DATA_DIR = path.join(__dirname, '..', 'public', 'data');
+const DATA_DIR = path.join(__dirname, 'data');
 const IMAGES_DIR = path.join(__dirname, '..', 'public', 'images');
 const FRAMES_FILE = path.join(__dirname, 'data', 'frames.json');
 const SUNGLASSES_FILE = path.join(__dirname, 'data', 'sunglasses.json');
@@ -82,14 +82,18 @@ async function writeJSONFile(filePath, data) {
 // Configure multer for image uploads
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    const folder = req.body.folder || 'frames';
-    const uploadDir = path.join(IMAGES_DIR, folder);
-    console.log(`🔍 Multer destination: ${uploadDir}`);
-    console.log(`🔍 Directory exists check: ${require('fs').existsSync(uploadDir)}`);
-    cb(null, uploadDir);
+    // Always upload to a temp directory first, then move to correct folder
+    const tempDir = path.join(IMAGES_DIR, 'temp');
+    if (!require('fs').existsSync(tempDir)) {
+      require('fs').mkdirSync(tempDir, { recursive: true });
+    }
+    console.log(`🔍 Multer temp destination: ${tempDir}`);
+    cb(null, tempDir);
   },
   filename: function (req, file, cb) {
-    const filename = req.body.filename || `${Date.now()}_${file.originalname}`;
+    // Generate filename with timestamp to ensure uniqueness
+    const sanitizedName = file.originalname.replace(/[^a-zA-Z0-9.-]/g, '_').toLowerCase();
+    const filename = `${Date.now()}_${sanitizedName}`;
     console.log(`🔍 Multer filename: ${filename}`);
     cb(null, filename);
   }
@@ -121,22 +125,21 @@ app.post('/api/upload-image', upload.single('image'), async (req, res) => {
 
     const folder = req.body.folder || 'frames';
     
-    // Move file to correct folder if it was saved to wrong location
-    const currentPath = req.file.path;
-    const correctDir = path.join(IMAGES_DIR, folder);
-    const correctPath = path.join(correctDir, req.file.filename);
+    // Move file from temp to correct folder
+    const tempPath = req.file.path;
+    const targetDir = path.join(IMAGES_DIR, folder);
+    const targetPath = path.join(targetDir, req.file.filename);
     
-    console.log(`🔍 Moving file from ${currentPath} to ${correctPath}`);
+    console.log(`🔍 Moving file from temp: ${tempPath}`);
+    console.log(`🔍 To target folder: ${targetPath}`);
     
-    // Ensure correct directory exists
-    if (!require('fs').existsSync(correctDir)) {
-      await require('fs').promises.mkdir(correctDir, { recursive: true });
+    // Ensure target directory exists
+    if (!require('fs').existsSync(targetDir)) {
+      await require('fs').promises.mkdir(targetDir, { recursive: true });
     }
     
     // Move file to correct location
-    if (currentPath !== correctPath) {
-      await require('fs').promises.rename(currentPath, correctPath);
-    }
+    await require('fs').promises.rename(tempPath, targetPath);
     
     const relativePath = `/images/${folder}/${req.file.filename}`;
     

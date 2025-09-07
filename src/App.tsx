@@ -26,7 +26,7 @@ import ContactManagement from './pages/admin/contacts/ContactManagement';
 function App() {
   return (
     <AdminProvider>
-      <Router basename="/clear-vision-optical">
+      <Router>
         <ScrollToTop />
         <Routes>
           {/* Public Routes */}

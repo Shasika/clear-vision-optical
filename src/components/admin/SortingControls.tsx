@@ -24,17 +24,18 @@ function SortingControls<T>({
       </div>
       
       <select
-        value={String(sortConfig.key)}
+        value={sortOptions.findIndex(opt => opt.key === sortConfig.key)}
         onChange={(e) => {
-          const selectedOption = sortOptions.find(opt => String(opt.key) === e.target.value);
+          const selectedIndex = parseInt(e.target.value);
+          const selectedOption = sortOptions[selectedIndex];
           if (selectedOption) {
             onSortKeyChange(selectedOption.key);
           }
         }}
         className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white"
       >
-        {sortOptions.map((option) => (
-          <option key={String(option.key)} value={String(option.key)}>
+        {sortOptions.map((option, index) => (
+          <option key={`${String(option.key)}-${option.label}-${index}`} value={index.toString()}>
             {option.label}
           </option>
         ))}
