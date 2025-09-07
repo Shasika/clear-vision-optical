@@ -52,10 +52,19 @@ const InquiryManagement: React.FC = () => {
     try {
       const response = await fetch('/api/inquiries/stats');
       if (!response.ok) throw new Error('Failed to fetch stats');
+      
+      // Check if response is JSON
+      const contentType = response.headers.get("content-type");
+      if (!contentType || !contentType.includes("application/json")) {
+        throw new Error("Response was not JSON");
+      }
+      
       const data = await response.json();
       setStats(data);
     } catch (err) {
       console.error('Error fetching stats:', err);
+      // Set default stats on error
+      setStats({ total: 0, new: 0, inProgress: 0, completed: 0, thisMonth: 0, thisWeek: 0 });
     }
   };
 

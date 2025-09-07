@@ -9,7 +9,7 @@ import type { Sunglasses } from '../../../types/sunglasses';
 const SunglassesForm: React.FC = () => {
   const navigate = useNavigate();
   const { id } = useParams();
-  const { sunglasses, loading: sunglassesLoading, createSunglasses, updateSunglasses, getSunglassesById } = useSunglassesAdmin();
+  const { sunglasses, loading: sunglassesLoading, createSunglasses, updateSunglasses } = useSunglassesAdmin();
   
   const isEditing = Boolean(id);
   const [loading, setLoading] = useState(false);

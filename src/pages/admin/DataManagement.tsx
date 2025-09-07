@@ -9,7 +9,6 @@ import {
   CheckCircle,
   Copy,
   Download,
-  Upload,
   RotateCcw,
   X
 } from 'lucide-react';
@@ -23,7 +22,7 @@ interface JsonFile {
 }
 
 const DataManagement: React.FC = () => {
-  const [jsonFiles, setJsonFiles] = useState<JsonFile[]>([]);
+  const [, setJsonFiles] = useState<JsonFile[]>([]);
   const [selectedFile, setSelectedFile] = useState<string>('');
   const [jsonContent, setJsonContent] = useState<string>('');
   const [originalContent, setOriginalContent] = useState<string>('');

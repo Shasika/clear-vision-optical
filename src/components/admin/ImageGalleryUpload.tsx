@@ -24,8 +24,8 @@ const ImageGalleryUpload: React.FC<ImageGalleryUploadProps> = ({
     }
     // Convert relative path to full URL - use same base URL as dataService
     const baseUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
-      ? 'http://localhost:3001' 
-      : `${window.location.protocol}//${window.location.hostname}:3001`;
+      ? 'http://localhost:3007' 
+      : '';  // Use relative path in production (Nginx will handle it)
     return `${baseUrl}${imagePath}`;
   };
   const [uploading, setUploading] = useState(false);

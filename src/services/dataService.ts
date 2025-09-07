@@ -153,25 +153,26 @@ class DataService {
   private sunglassesCache: Sunglasses[] | null = null;
   private companyCache: CompanyData | null = null;
   private get apiBaseUrl(): string {
+    // Check for environment variable first
+    if (import.meta.env.VITE_API_BASE_URL) {
+      return import.meta.env.VITE_API_BASE_URL;
+    }
+    
     // Use environment-specific API URLs
     if (typeof window !== 'undefined') {
       const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-      const isGitHubPages = window.location.hostname.includes('github.io');
       
       if (isLocalhost) {
         // Development: use local backend
-        return 'http://localhost:3001/api';
-      } else if (isGitHubPages) {
-        // Production: GitHub Pages frontend (for when you deploy backend later)
-        return 'http://localhost:3001/api';
+        return 'http://localhost:3007/api';
       } else {
-        // Fallback for other production domains
-        return `${window.location.protocol}//${window.location.hostname}:3001/api`;
+        // Production: use relative path for Nginx proxy
+        return '/api';
       }
     }
     
-    // Default fallback for development
-    return 'http://localhost:3001/api';
+    // Default fallback
+    return '/api';
   }
 
   // Frames management

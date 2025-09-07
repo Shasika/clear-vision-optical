@@ -9,7 +9,7 @@ import type { Frame } from '../../../types/frames';
 const FrameForm: React.FC = () => {
   const navigate = useNavigate();
   const { id } = useParams();
-  const { frames, loading: framesLoading, createFrame, updateFrame, getFrameById } = useFramesAdmin();
+  const { frames, loading: framesLoading, createFrame, updateFrame } = useFramesAdmin();
   
   const isEditing = Boolean(id);
   const [loading, setLoading] = useState(false);

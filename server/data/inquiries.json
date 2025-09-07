@@ -1,5 +1,26 @@
 [
   {
+    "id": "INQ-1757259994166-zb1m2dvho",
+    "customerInfo": {
+      "name": "shasika",
+      "email": "test@gmail.com",
+      "phone": "0712345678"
+    },
+    "product": {
+      "id": "sg-018",
+      "name": "Bolle Bolt",
+      "brand": "Bolle",
+      "type": "sunglasses",
+      "price": 16000,
+      "imageUrl": ""
+    },
+    "message": "I'm interested in the Bolle Bolle Bolt. Could you please provide more information about pricing and availability?",
+    "status": "new",
+    "priority": "high",
+    "createdAt": "2025-09-07T15:46:34.166Z",
+    "updatedAt": "2025-09-07T15:51:23.926Z"
+  },
+  {
     "id": "INQ-1757013232373-z457c95q7",
     "customerInfo": {
       "name": "sdfsdf",
@@ -18,7 +39,7 @@
     "status": "new",
     "priority": "medium",
     "createdAt": "2025-09-04T19:13:52.373Z",
-    "updatedAt": "2025-09-04T19:13:52.373Z"
+    "updatedAt": "2025-09-07T15:51:31.747Z"
   },
   {
     "id": "INQ-1757013232374-a123b456c",

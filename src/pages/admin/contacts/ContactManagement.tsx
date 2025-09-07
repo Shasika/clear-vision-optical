@@ -60,6 +60,8 @@ const ContactManagement: React.FC = () => {
       setStats(data);
     } catch (err) {
       console.error('Error fetching stats:', err);
+      // Set default stats on error
+      setStats({ total: 0, new: 0, inProgress: 0, completed: 0, thisMonth: 0, thisWeek: 0 });
     }
   };
 

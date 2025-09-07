@@ -24,8 +24,8 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
     // For relative paths, use the current domain with the API port
     const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
     const apiBaseUrl = isLocalhost 
-      ? 'http://localhost:3001'
-      : `${window.location.protocol}//${window.location.hostname}:3001`;
+      ? 'http://localhost:3007'
+      : '';  // Use relative path in production (Nginx will handle it)
     return `${apiBaseUrl}${imagePath}`;
   };
 
